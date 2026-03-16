@@ -8,7 +8,7 @@
 
 <title>Veg Momos in Kolkata | Fresh Himalayan Dumplings – Momo Heaven</title>
 
-<meta name="description" content="Looking for veg momos in Kolkata? Momo Heaven serves fresh vegetarian Himalayan dumplings including steamed veg momos and fried veg momos with spicy chutney.">
+<meta name="description" content="Enjoy fresh veg momos in Kolkata at Momo Heaven. Try steamed veg momos, fried veg momos and spicy vegetarian Himalayan dumplings served with chutney.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,23 +17,17 @@
 <style>
 
 body{
-font-family:'Karma', serif;
-background:url('https://i.postimg.cc/T3BNnrns/momo-jpg.jpg') center/cover fixed;
-color:white;
+font-family:Arial, sans-serif;
 margin:0;
+background:#111;
+color:white;
 }
 
-body::before{
-content:"";
-position:fixed;
-inset:0;
-background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.85));
-z-index:-1;
-}
+/* NAVBAR */
 
 .navbar{
-background:rgba(0,0,0,0.9);
-padding:16px 40px;
+background:#000;
+padding:15px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -50,37 +44,85 @@ font-weight:bold;
 color:#ff5722;
 }
 
-.section{
-max-width:900px;
-margin:80px auto;
-padding:40px;
-background:rgba(0,0,0,0.75);
-border-radius:16px;
-box-shadow:0 12px 30px rgba(0,0,0,0.6);
+/* HERO */
+
+.hero{
+text-align:center;
+padding:120px 20px;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+url('https://i.postimg.cc/T3BNnrns/momo-jpg.jpg') center/cover;
 }
 
-h1{
-font-size:42px;
-margin-bottom:20px;
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
 }
 
-h2{
-margin-top:40px;
-font-size:28px;
-}
-
-p{
-font-size:18px;
-line-height:1.8;
+.hero p{
+font-size:20px;
 color:#ddd;
 }
+
+/* CONTAINER */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+/* CARD */
+
+.card{
+background:#1b1b1b;
+border-radius:12px;
+overflow:hidden;
+text-decoration:none;
+color:white;
+box-shadow:0 8px 20px rgba(0,0,0,0.5);
+transition:transform 0.25s, box-shadow 0.25s;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.card h2{
+padding:15px 20px 5px;
+color:#ff5722;
+}
+
+.card p{
+padding:0 20px 20px;
+color:#ddd;
+font-size:15px;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,0.7);
+}
+
+/* FOOTER */
 
 footer{
 text-align:center;
 padding:40px;
 background:#000;
-margin-top:80px;
-color:#ccc;
+color:#bbb;
+margin-top:60px;
 }
 
 </style>
@@ -102,68 +144,55 @@ color:#ccc;
 
 </nav>
 
-<section class="section">
+<header class="hero">
 
 <h1>Veg Momos in Kolkata</h1>
 
+<p>Fresh vegetarian Himalayan dumplings served hot with spicy chutney</p>
+
+</header>
+
+<section class="container">
+
 <p>
 Veg momos are a popular vegetarian street food in Kolkata.
-Inspired by the traditional dumplings of Darjeeling and the
-Himalayan region, these dumplings are known for their soft
-wrappers and flavorful vegetable fillings.
+Inspired by the famous dumplings of Darjeeling and the
+Himalayan region, these dumplings are loved for their
+thin wrappers and flavorful vegetable fillings.
 </p>
 
 <p>
 At Momo Heaven we prepare fresh vegetarian momos every day
-using simple ingredients and traditional Himalayan recipes.
-Our veg dumplings are served hot with spicy chutney inspired
-by Darjeeling street food.
+using traditional Himalayan recipes. Our menu includes
+steamed veg momos, crispy fried veg momos and spicy veg
+momos served with delicious chutney.
 </p>
 
+<div class="grid">
+
+<div class="card">
+<img src="https://i.postimg.cc/T3BNnrns/momo-jpg.jpg" alt="Steamed veg momos">
 <h2>Steamed Veg Momos</h2>
+<p>Traditional vegetarian dumplings filled with cabbage, carrots and Himalayan spices.</p>
+</div>
 
-<p>
-Steamed veg momos are the classic style of vegetarian
-Himalayan dumplings. They are made with thin wrappers
-filled with fresh vegetables like cabbage, carrots,
-and aromatic spices.
-</p>
-
-<p>
-The dumplings are gently steamed until soft and juicy,
-making them a light and flavorful snack that pairs
-perfectly with spicy chili chutney.
-</p>
-
+<div class="card">
+<img src="https://i.postimg.cc/T3BNnrns/momo-jpg.jpg" alt="Fried veg momos">
 <h2>Fried Veg Momos</h2>
+<p>Crispy vegetarian dumplings with golden wrappers and flavorful vegetable filling.</p>
+</div>
 
-<p>
-Fried veg momos offer a crispy twist on traditional
-vegetarian dumplings. After steaming, the dumplings
-are lightly fried to create a golden outer layer
-while keeping the vegetable filling soft inside.
-</p>
+<div class="card">
+<img src="https://i.postimg.cc/T3BNnrns/momo-jpg.jpg" alt="Spicy veg momos">
+<h2>Spicy Veg Momos</h2>
+<p>Veg dumplings tossed in spicy chili sauce with garlic and aromatic spices.</p>
+</div>
 
-<p>
-This version is especially popular among street
-food lovers who enjoy a crunchy texture combined
-with the rich flavors of Himalayan cuisine.
-</p>
+</div>
 
-<h2>Vegetarian Himalayan Dumplings</h2>
-
-<p>
-Vegetarian dumplings have become a favorite snack
-across Kolkata. Inspired by the famous street food
-of Darjeeling, veg momos offer a delicious meat-free
-option for momo lovers.
-</p>
-
-<p>
-Explore our full menu and Himalayan dumpling
-specialties on the
-<a href="index.html">Best Darjeeling Momos in Kolkata</a>
-homepage.
+<p style="margin-top:40px;">
+Explore more Himalayan dumplings on the
+<a href="index.html" style="color:#ff5722;">Momo Heaven homepage</a>.
 </p>
 
 </section>
