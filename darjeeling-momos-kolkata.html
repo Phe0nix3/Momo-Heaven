@@ -8,7 +8,7 @@
 
 <title>Darjeeling Style Momos in Kolkata | Himalayan Dumplings – Momo Heaven</title>
 
-<meta name="description" content="Discover authentic Darjeeling style momos in Kolkata at Momo Heaven. Fresh Himalayan dumplings including chicken and veg momos served with spicy chutney.">
+<meta name="description" content="Discover authentic Darjeeling style momos in Kolkata at Momo Heaven. Fresh Himalayan dumplings served with spicy chutney inspired by Darjeeling street food.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,23 +17,17 @@
 <style>
 
 body{
-font-family:'Karma', serif;
-background:url('https://i.postimg.cc/T3BNnrns/momo-jpg.jpg') center/cover fixed;
-color:white;
+font-family:Arial, sans-serif;
 margin:0;
+background:#111;
+color:white;
 }
 
-body::before{
-content:"";
-position:fixed;
-inset:0;
-background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.85));
-z-index:-1;
-}
+/* NAVBAR */
 
 .navbar{
-background:rgba(0,0,0,0.9);
-padding:16px 40px;
+background:#000;
+padding:15px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -46,30 +40,89 @@ margin-left:20px;
 font-weight:bold;
 }
 
-.section{
-max-width:900px;
-margin:80px auto;
-padding:40px;
-background:rgba(0,0,0,0.75);
-border-radius:16px;
+.navbar a:hover{
+color:#ff5722;
 }
 
-h1{font-size:42px;}
-h2{margin-top:40px;}
-h3{margin-top:25px;}
+/* HERO */
 
-p{
-font-size:18px;
-line-height:1.8;
+.hero{
+text-align:center;
+padding:120px 20px;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+url('https://i.postimg.cc/T3BNnrns/momo-jpg.jpg') center/cover;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
 color:#ddd;
 }
+
+/* CONTAINER */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+/* CARD */
+
+.card{
+background:#1b1b1b;
+border-radius:12px;
+overflow:hidden;
+text-decoration:none;
+color:white;
+box-shadow:0 8px 20px rgba(0,0,0,0.5);
+transition:transform 0.25s, box-shadow 0.25s;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.card h2{
+padding:15px 20px 5px;
+color:#ff5722;
+}
+
+.card p{
+padding:0 20px 20px;
+color:#ddd;
+font-size:15px;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,0.7);
+}
+
+/* FOOTER */
 
 footer{
 text-align:center;
 padding:40px;
 background:#000;
-margin-top:80px;
-color:#ccc;
+color:#bbb;
+margin-top:60px;
 }
 
 </style>
@@ -91,50 +144,54 @@ color:#ccc;
 
 </nav>
 
-<section class="section">
+<header class="hero">
 
-<h1>Darjeeling Style Momos in Kolkata</h1>
+<h1>Darjeeling Style Momos</h1>
+
+<p>Authentic Himalayan dumplings inspired by Darjeeling street food</p>
+
+</header>
+
+<section class="container">
 
 <p>
-Darjeeling style momos are famous across India for their thin wrappers,
-juicy fillings, and spicy Himalayan chutney. Originally popular in the
-hill town of Darjeeling, these dumplings have become one of the most
+Darjeeling style momos are famous across India for their soft wrappers,
+juicy fillings, and spicy chutney. Originally popular in the hill town
+of Darjeeling, these Himalayan dumplings have become one of the most
 loved street foods in Kolkata.
 </p>
 
 <p>
 At Momo Heaven we bring the authentic taste of Darjeeling street food
-to Kolkata with freshly prepared Himalayan dumplings inspired by
-traditional recipes.
+to Kolkata with freshly prepared Himalayan dumplings made using
+traditional recipes and simple ingredients.
 </p>
 
-<h2>What Makes Darjeeling Momos Special</h2>
+<div class="grid">
 
-<p>
-Darjeeling momos are known for their delicate wrappers and flavorful
-fillings. They are usually served steamed and accompanied by a
-spicy chutney made from chili, garlic, and tomatoes.
-</p>
+<div class="card">
+<img src="https://i.postimg.cc/T3BNnrns/momo-jpg.jpg" alt="Traditional Darjeeling momos">
+<h2>Traditional Darjeeling Momos</h2>
+<p>Soft Himalayan dumplings with thin wrappers and juicy fillings inspired by classic Darjeeling recipes.</p>
+</div>
 
-<h2>Authentic Himalayan Dumplings</h2>
+<div class="card">
+<img src="https://i.postimg.cc/T3BNnrns/momo-jpg.jpg" alt="Himalayan dumplings">
+<h2>Himalayan Style Dumplings</h2>
+<p>Fresh dumplings prepared using traditional Himalayan cooking techniques and simple ingredients.</p>
+</div>
 
-<p>
-Our menu includes chicken momos, veg momos, and fried dumplings
-prepared fresh every day using simple ingredients and traditional
-Himalayan cooking techniques.
-</p>
+<div class="card">
+<img src="https://i.postimg.cc/T3BNnrns/momo-jpg.jpg" alt="Spicy Darjeeling momos">
+<h2>Spicy Darjeeling Momos</h2>
+<p>Delicious dumplings served with bold chili chutney inspired by the street food of Darjeeling.</p>
+</div>
 
-<h2>Frequently Asked Questions</h2>
+</div>
 
-<h3>What are Darjeeling style momos?</h3>
-<p>They are Himalayan dumplings with thin wrappers and juicy fillings.</p>
-
-<h3>Are Darjeeling momos spicy?</h3>
-<p>The dumplings are mild, but they are served with spicy chutney.</p>
-
-<p>
-Explore more dishes on the
-<a href="index.html">Best Darjeeling Momos in Kolkata</a> homepage.
+<p style="margin-top:40px;">
+Explore our full menu and Himalayan dumpling specialties on the
+<a href="index.html" style="color:#ff5722;">Momo Heaven homepage</a>.
 </p>
 
 </section>
@@ -142,12 +199,16 @@ Explore more dishes on the
 <footer>
 
 <p><strong>Momo Heaven</strong></p>
+
 <p>Authentic Darjeeling & Himalayan Momos in Kolkata</p>
+
 <p>Kolkata, India</p>
+
 <p>© 2026 Momo Heaven</p>
 
 </footer>
 
 </body>
+
 </html>
 ```
