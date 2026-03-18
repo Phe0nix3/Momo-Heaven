@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://phe0nix3.github.io/Momo-Heaven/sitemap.xml
