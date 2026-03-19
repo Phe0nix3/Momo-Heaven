@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Karma:wght@400;700&display=swap');
+
+:root{
+--accent:#ff5722;
+--accent2:#ff784e;
+--text:#ffffff;
+--subtext:#e6e6e6;
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+}
+
+body{
+font-family:'Karma',serif;
+background:url('https://i.postimg.cc/T3BNnrns/momo-jpg.jpg') center/cover fixed;
+color:var(--text);
+}
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.85));
+z-index:-1;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+background:rgba(0,0,0,0.9);
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:100;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:bold;
+font-size:16px;
+}
+
+.navbar a:hover{
+color:var(--accent);
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:120px 20px;
+}
+
+.hero img{
+width:180px;
+border-radius:12px;
+margin-bottom:20px;
+}
+
+h1{
+font-size:48px;
+margin-bottom:10px;
+text-shadow:3px 3px 10px rgba(0,0,0,0.8);
+}
+
+.tagline{
+font-size:20px;
+margin-bottom:20px;
+color:#ddd;
+}
+
+h2{
+font-size:30px;
+margin-bottom:10px;
+}
+
+p{
+font-size:18px;
+line-height:1.8;
+color:var(--subtext);
+}
+
+/* SECTIONS */
+
+.section{
+max-width:900px;
+margin:80px auto;
+padding:40px;
+background:rgba(0,0,0,0.75);
+border-radius:16px;
+box-shadow:0 12px 30px rgba(0,0,0,0.6);
+}
+
+/* BUTTON */
+
+.btn{
+padding:16px 36px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:linear-gradient(135deg,var(--accent),var(--accent2));
+color:white;
+cursor:pointer;
+margin:10px;
+transition:0.3s;
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.btn:hover{
+transform:translateY(-4px) scale(1.03);
+box-shadow:0 15px 35px rgba(0,0,0,0.6);
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+gap:20px;
+max-width:1000px;
+margin:60px auto;
+}
+
+.gallery img{
+width:100%;
+border-radius:14px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.06);
+}
+
+/* MENU */
+
+.menu{
+list-style:none;
+padding:0;
+}
+
+.menu li{
+padding:16px;
+margin:10px 0;
+background:rgba(0,0,0,0.6);
+border-radius:12px;
+}
+
+.menu a{
+color:var(--accent);
+text-decoration:none;
+font-weight:bold;
+}
+
+.menu a:hover{
+text-decoration:underline;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+/* CARD */
+
+.card{
+background:rgba(0,0,0,0.75);
+border-radius:16px;
+overflow:hidden;
+text-decoration:none;
+color:white;
+box-shadow:0 12px 30px rgba(0,0,0,0.6);
+transition:transform 0.25s, box-shadow 0.25s;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.card h2{
+padding:15px 20px 5px;
+color:var(--accent);
+}
+
+.card p{
+padding:0 20px 20px;
+color:var(--subtext);
+font-size:16px;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,0.7);
+}
+
+/* MAP */
+
+iframe{
+width:100%;
+height:350px;
+border-radius:14px;
+border:none;
+}
+
+/* FAQ */
+
+.faq-question{
+font-size:18px;
+font-weight:bold;
+color:var(--accent);
+margin-bottom:8px;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp{
+position:fixed;
+bottom:30px;
+right:30px;
+background:#25d366;
+color:white;
+padding:16px 20px;
+border-radius:50px;
+font-size:18px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 8px 20px rgba(0,0,0,0.4);
+z-index:999;
+transition:0.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.05);
+box-shadow:0 12px 30px rgba(0,0,0,0.5);
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+background:#000;
+margin-top:80px;
+color:#ccc;
+}
+
+footer a{
+color:var(--accent);
+text-decoration:none;
+margin:0 10px;
+}
+
+footer a:hover{
+text-decoration:underline;
+}
