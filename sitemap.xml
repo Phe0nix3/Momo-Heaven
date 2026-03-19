@@ -26,4 +26,24 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://phe0nix3.github.io/Momo-Heaven/steamed-momos-kolkata.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://phe0nix3.github.io/Momo-Heaven/spicy-momos-kolkata.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://phe0nix3.github.io/Momo-Heaven/fried-momos-kolkata.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://phe0nix3.github.io/Momo-Heaven/momos-near-me-kolkata.html</loc>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
