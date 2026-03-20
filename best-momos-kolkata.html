@@ -11,96 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://phe0nix3.github.io/Momo-Heaven/best-momos-kolkata.html">
 <meta property="og:image" content="https://i.postimg.cc/T3BNnrns/momo-jpg.jpg">
-<style>
-body{
-font-family:Arial, sans-serif;
-margin:0;
-background:#111;
-color:white;
-}
-/* NAVBAR */
-.navbar{
-background:#000;
-padding:15px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-.navbar a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-font-weight:bold;
-}
-.navbar a:hover{
-color:#ff5722;
-}
-/* HERO */
-.hero{
-text-align:center;
-padding:120px 20px;
-background:
-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
-url('https://i.postimg.cc/T3BNnrns/momo-jpg.jpg') center/cover;
-}
-.hero h1{
-font-size:48px;
-margin-bottom:10px;
-}
-.hero p{
-font-size:20px;
-color:#ddd;
-}
-/* CONTAINER */
-.container{
-max-width:1100px;
-margin:auto;
-padding:60px 20px;
-}
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:40px;
-}
-/* CARD */
-.card{
-background:#1b1b1b;
-border-radius:12px;
-overflow:hidden;
-text-decoration:none;
-color:white;
-box-shadow:0 8px 20px rgba(0,0,0,0.5);
-transition:transform 0.25s, box-shadow 0.25s;
-}
-.card img{
-width:100%;
-height:180px;
-object-fit:cover;
-}
-.card h2{
-padding:15px 20px 5px;
-color:#ff5722;
-}
-.card p{
-padding:0 20px 20px;
-color:#ddd;
-font-size:15px;
-}
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 35px rgba(0,0,0,0.7);
-}
-/* FOOTER */
-footer{
-text-align:center;
-padding:40px;
-background:#000;
-color:#bbb;
-margin-top:60px;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <nav class="navbar">
@@ -114,9 +25,9 @@ margin-top:60px;
 </nav>
 <header class="hero">
 <h1>Best Momos in Kolkata</h1>
-<p>Fresh Darjeeling style Himalayan dumplings served hot with spicy chutney</p>
+<p class="tagline">Fresh Darjeeling style Himalayan dumplings served hot with spicy chutney</p>
 </header>
-<section class="container">
+<section class="section">
 
 <p>
 Kolkata has a vibrant street food culture and momos have become
@@ -164,7 +75,7 @@ that fresh ingredients and authentic recipes make.
 <h2>Veg Momos</h2>
 <p>Fresh vegetarian Himalayan dumplings filled with vegetables and served with spicy chutney.</p>
 </a>
-<a href="darjeeling-momos-kolkata.html" content="card">
+<a href="darjeeling-momos-kolkata.html" class="card">
 <img src="https://i.postimg.cc/T3BNnrns/momo-jpg.jpg" alt="Darjeeling style momos authentic Himalayan dumplings Kolkata">
 <h2>Darjeeling Style Momos</h2>
 <p>Authentic Himalayan dumplings inspired by the famous momo stalls of Darjeeling.</p>
@@ -183,5 +94,10 @@ Explore our full menu and Himalayan dumpling specialties on the
 <p>Kolkata, India</p>
 <p>© 2026 Momo Heaven</p>
 </footer>
+
+<a href="https://wa.me/919999999999" class="whatsapp" target="_blank">
+💬 WhatsApp
+</a>
+
 </body>
 </html>
