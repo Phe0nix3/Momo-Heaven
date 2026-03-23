@@ -26,6 +26,7 @@ padding:15px 30px;
 background:#000;
 position:sticky;
 top:0;
+z-index:1000;
 }
 
 .navbar a{
@@ -45,11 +46,12 @@ align-items:center;
 text-align:center;
 background:
 linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),
-url('images/steam momo.jpg') center/cover;
+url("images/steam-momo.jpg") center/cover no-repeat;
 }
 
 .hero h1{
-font-size:50px;
+font-size:48px;
+margin-bottom:10px;
 }
 
 .hero p{
@@ -67,7 +69,7 @@ border-radius:6px;
 cursor:pointer;
 }
 
-/* MENU */
+/* CONTAINER */
 
 .container{
 padding:60px 20px;
@@ -75,10 +77,13 @@ max-width:1100px;
 margin:auto;
 }
 
+/* GRID */
+
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
+margin-top:30px;
 }
 
 /* CARD */
@@ -112,6 +117,12 @@ background:linear-gradient(transparent,rgba(0,0,0,0.9));
 .overlay h3{
 margin:0;
 color:#ff5722;
+}
+
+.overlay p{
+margin:5px 0 0;
+font-size:14px;
+color:#ddd;
 }
 
 /* LOCATION */
@@ -161,26 +172,26 @@ View Menu
 <div class="grid">
 
 <div class="card">
-<img src="images/steam momo.jpg">
+<img src="images/steam-momo.jpg" alt="Steamed momos">
 <div class="overlay">
 <h3>Steamed Momos</h3>
-<p>₹80</p>
+<p>₹80 • 6 pcs</p>
 </div>
 </div>
 
 <div class="card">
-<img src="images/fry momo.jpg">
+<img src="images/fry-momo.jpg" alt="Fried momos">
 <div class="overlay">
 <h3>Fried Momos</h3>
-<p>₹120</p>
+<p>₹120 • 6 pcs</p>
 </div>
 </div>
 
 <div class="card">
-<img src="images/spicy momo.jpg">
+<img src="images/spicy-momo.jpg" alt="Spicy momos">
 <div class="overlay">
 <h3>Spicy Momos</h3>
-<p>₹120</p>
+<p>₹120 • 6 pcs</p>
 </div>
 </div>
 
