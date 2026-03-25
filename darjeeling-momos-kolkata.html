@@ -3,61 +3,95 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Authentic Darjeeling Style Momos in Kolkata | Himalayan Dumplings | Momo Heaven</title>
-<meta name="description" content="Discover authentic Darjeeling style momos in Kolkata at Momo Heaven. Fresh Himalayan dumplings made daily with traditional recipes. Served with signature spicy red chutney.">
-<meta name="keywords" content="darjeeling momos kolkata, darjeeling style momos, himalayan momos kolkata, authentic darjeeling momos, best darjeeling momo in kolkata">
+<title>Best Momos in Kolkata | Top 10 Must-Try Dumplings | Momo Heaven</title>
+<meta name="description" content="Discover the best momos in Kolkata at Momo Heaven. Rated 4.8⭐ for authentic Darjeeling style momos. Fresh, juicy dumplings with spicy red chutney. Order now!">
+<meta name="keywords" content="best momos in kolkata, top momos kolkata, famous momos kolkata, best chicken momos kolkata, best veg momos kolkata">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://phe0nix3.github.io/Momo-Heaven/darjeeling-momos-kolkata.html">
+<link rel="canonical" href="https://phe0nix3.github.io/Momo-Heaven/best-momos-kolkata.html">
 
 <!-- Open Graph Tags -->
-<meta property="og:title" content="Authentic Darjeeling Style Momos in Kolkata | Momo Heaven">
-<meta property="og:description" content="Experience authentic Darjeeling style Himalayan momos in Kolkata. Fresh dumplings with spicy red chutney.">
+<meta property="og:title" content="Best Momos in Kolkata | Top Rated Dumplings | Momo Heaven">
+<meta property="og:description" content="Rated #1 for best momos in Kolkata. Authentic Darjeeling style, fresh daily, spicy chutney. Visit us today!">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://phe0nix3.github.io/Momo-Heaven/darjeeling-momos-kolkata.html">
+<meta property="og:url" content="https://phe0nix3.github.io/Momo-Heaven/best-momos-kolkata.html">
 <meta property="og:image" content="https://i.postimg.cc/tJ046b6L/momo.jpg">
 
 <!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
 --accent:#ff5722;
 --accent2:#ff784e;
---text:#ffffff;
---subtext:#e6e6e6;
+--accent-light:#ff9a6e;
+--gold:#ffc107;
+--dark:#1a1a1a;
 }
 
 *{
 box-sizing:border-box;
 margin:0;
+padding:0;
 }
 
 body{
 font-family:'Karma',serif;
-background:url('https://i.postimg.cc/T3BNnrns/momo-jpg.jpg') center/cover fixed;
-color:var(--text);
+background:linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+color:#ffffff;
 }
 
-body::before{
-content:"";
-position:fixed;
-inset:0;
-background:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.9));
-z-index:-1;
+/* Vibrant Header Background */
+.vibrant-bg{
+background:linear-gradient(135deg, #ff5722 0%, #ff784e 50%, #ff9a6e 100%);
+padding:60px 0;
+text-align:center;
+position:relative;
+overflow:hidden;
 }
 
-/* NAVBAR - Matching Homepage */
+.vibrant-bg::before{
+content:"🥟";
+position:absolute;
+font-size:200px;
+opacity:0.1;
+bottom:-30px;
+right:-30px;
+transform:rotate(-15deg);
+}
+
+.vibrant-bg::after{
+content:"🌶️";
+position:absolute;
+font-size:180px;
+opacity:0.1;
+top:-40px;
+left:-20px;
+transform:rotate(10deg);
+}
+
+.vibrant-bg h1{
+font-size:54px;
+margin-bottom:15px;
+text-shadow:3px 3px 6px rgba(0,0,0,0.3);
+}
+
+.vibrant-bg p{
+font-size:22px;
+opacity:0.95;
+}
+
+/* NAVBAR */
 .navbar{
 position:sticky;
 top:0;
-background:rgba(0, 0, 0, 0.85);
+background:rgba(0,0,0,0.95);
 backdrop-filter:blur(12px);
 padding:15px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:100;
-border-bottom:1px solid rgba(255,255,255,0.1);
+border-bottom:2px solid #ff5722;
 }
 
 .logo{
@@ -113,16 +147,18 @@ color:white;
 text-decoration:none;
 font-weight:bold;
 transition:0.3s;
-box-shadow:0 4px 12px rgba(255,87,34,0.3);
+box-shadow:0 4px 12px rgba(255,87,34,0.4);
+animation: pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%,100%{box-shadow:0 4px 12px rgba(255,87,34,0.4);}
+50%{box-shadow:0 6px 20px rgba(255,87,34,0.7);}
 }
 
 .nav-cta:hover{
 transform:translateY(-2px);
-box-shadow:0 6px 18px rgba(255,87,34,0.5);
-}
-
-.nav-cta::after{
-display:none;
+box-shadow:0 8px 25px rgba(255,87,34,0.6);
 }
 
 .hamburger{
@@ -135,7 +171,7 @@ color:white;
 /* Breadcrumb */
 .breadcrumb{
 padding:15px 40px;
-background:rgba(0,0,0,0.5);
+background:rgba(0,0,0,0.6);
 font-size:14px;
 }
 
@@ -144,146 +180,323 @@ color:#ff784e;
 text-decoration:none;
 }
 
-.breadcrumb a:hover{
-text-decoration:underline;
-}
-
-/* Hero Section - FIXED BACKGROUND IMAGE */
-.hero{
-text-align:center;
-padding:100px 20px;
-background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.7)), url('https://i.postimg.cc/T3BNnrns/momo-jpg.jpg') center/cover;
-margin-bottom:40px;
-}
-
-.hero h1{
-font-size:52px;
-margin-bottom:15px;
-}
-
-.hero h1 span{
-color:#ff5722;
-}
-
-.hero p{
-font-size:22px;
-color:#ddd;
-}
-
 /* Container */
 .container{
-max-width:1100px;
+max-width:1200px;
 margin:0 auto;
-padding:0 20px 60px;
+padding:40px 20px;
 }
 
-.section{
-background:rgba(0,0,0,0.75);
-border-radius:16px;
-padding:40px;
+/* Hero Banner */
+.hero-banner{
+background:linear-gradient(135deg, rgba(255,87,34,0.2), rgba(0,0,0,0.8)), url('https://i.postimg.cc/tJ046b6L/momo.jpg');
+background-size:cover;
+background-position:center;
+border-radius:24px;
+padding:60px 40px;
 margin-bottom:40px;
-box-shadow:0 12px 30px rgba(0,0,0,0.6);
+text-align:center;
+border:1px solid rgba(255,87,34,0.3);
 }
 
-h2{
-font-size:32px;
-margin-bottom:20px;
+.hero-banner h2{
+font-size:42px;
+margin-bottom:15px;
 color:#ff5722;
 }
 
-h3{
+.hero-banner .rating{
 font-size:24px;
-margin:25px 0 15px;
-color:#ff784e;
+color:#ffc107;
+margin:15px 0;
 }
 
-p{
+.rating span{
 font-size:18px;
-line-height:1.8;
-color:#e6e6e6;
-margin-bottom:20px;
+color:#fff;
+margin-left:10px;
 }
 
-/* Grid for Cards */
-.grid{
+/* Stats Cards */
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+margin-bottom:50px;
+}
+
+.stat-card{
+background:linear-gradient(135deg, rgba(255,87,34,0.15), rgba(0,0,0,0.6));
+border-radius:20px;
+padding:30px 20px;
+text-align:center;
+border:1px solid rgba(255,87,34,0.3);
+transition:all 0.3s ease;
+}
+
+.stat-card:hover{
+transform:translateY(-5px);
+background:linear-gradient(135deg, rgba(255,87,34,0.25), rgba(0,0,0,0.7));
+border-color:#ff5722;
+}
+
+.stat-number{
+font-size:48px;
+font-weight:bold;
+color:#ff5722;
+}
+
+.stat-label{
+font-size:16px;
+color:#ccc;
+margin-top:10px;
+}
+
+/* Section Cards */
+.section-card{
+background:rgba(0,0,0,0.7);
+border-radius:24px;
+padding:40px;
+margin-bottom:40px;
+border:1px solid rgba(255,87,34,0.2);
+transition:all 0.3s ease;
+}
+
+.section-card:hover{
+border-color:#ff5722;
+box-shadow:0 10px 40px rgba(255,87,34,0.1);
+}
+
+.section-title{
+font-size:32px;
+margin-bottom:25px;
+color:#ff5722;
+border-left:4px solid #ff5722;
+padding-left:20px;
+}
+
+/* Momo Grid */
+.momo-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 margin-top:30px;
 }
 
-.card{
-background:rgba(0,0,0,0.6);
-border-radius:16px;
+.momo-item{
+background:linear-gradient(135deg, rgba(255,255,255,0.08), rgba(0,0,0,0.4));
+border-radius:20px;
 overflow:hidden;
-transition:transform 0.3s ease, box-shadow 0.3s ease;
-border-bottom:3px solid #ff5722;
+transition:all 0.4s ease;
+cursor:pointer;
 }
 
-.card:hover{
+.momo-item:hover{
 transform:translateY(-8px);
-box-shadow:0 20px 40px rgba(0,0,0,0.4);
+box-shadow:0 20px 40px rgba(255,87,34,0.2);
 }
 
-.card img{
+.momo-image{
+height:220px;
+overflow:hidden;
+position:relative;
+}
+
+.momo-image img{
 width:100%;
-height:200px;
+height:100%;
 object-fit:cover;
+transition:transform 0.4s ease;
 }
 
-.card h3{
-padding:20px 20px 10px;
-margin:0;
-color:#ff5722;
+.momo-item:hover .momo-image img{
+transform:scale(1.05);
+}
+
+.badge{
+position:absolute;
+top:15px;
+right:15px;
+background:#ff5722;
+padding:5px 12px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+}
+
+.momo-info{
+padding:20px;
+}
+
+.momo-info h3{
 font-size:22px;
+margin-bottom:8px;
+color:#ff784e;
 }
 
-.card p{
-padding:0 20px 20px;
-font-size:15px;
-color:#bbb;
-}
-
-/* List Styling */
-.momo-list{
-list-style:none;
-padding:0;
-}
-
-.momo-list li{
-padding:12px 0;
-border-bottom:1px solid rgba(255,255,255,0.1);
-font-size:18px;
-}
-
-.momo-list li strong{
+.momo-price{
+font-size:20px;
+font-weight:bold;
 color:#ff5722;
+margin:10px 0;
+}
+
+.momo-desc{
+font-size:14px;
+color:#bbb;
+line-height:1.5;
+}
+
+/* Review Cards */
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.review-card{
+background:rgba(255,255,255,0.05);
+border-radius:20px;
+padding:25px;
+transition:all 0.3s ease;
+}
+
+.review-card:hover{
+background:rgba(255,87,34,0.1);
+transform:translateX(5px);
+}
+
+.review-stars{
+color:#ffc107;
+font-size:18px;
+margin-bottom:12px;
+}
+
+.review-text{
+font-size:16px;
+line-height:1.6;
+margin-bottom:15px;
+font-style:italic;
+}
+
+.reviewer{
+font-weight:bold;
+color:#ff784e;
+}
+
+/* Why Best Section */
+.best-features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:25px;
+}
+
+.feature{
+text-align:center;
+padding:25px;
+background:rgba(255,87,34,0.08);
+border-radius:20px;
+transition:0.3s;
+}
+
+.feature:hover{
+background:rgba(255,87,34,0.15);
+transform:scale(1.02);
+}
+
+.feature-icon{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.feature h4{
+font-size:20px;
+color:#ff784e;
+margin-bottom:10px;
+}
+
+/* CTA Section */
+.cta-section{
+background:linear-gradient(135deg, #ff5722, #ff784e);
+border-radius:24px;
+padding:50px 40px;
+text-align:center;
+margin-top:40px;
+}
+
+.cta-section h3{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.cta-section p{
+font-size:18px;
+margin-bottom:25px;
+opacity:0.95;
+}
+
+.cta-buttons{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.cta-btn{
+background:#fff;
+color:#ff5722;
+padding:14px 32px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.cta-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.cta-btn-outline{
+background:transparent;
+border:2px solid #fff;
+color:#fff;
+padding:12px 30px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.cta-btn-outline:hover{
+background:#fff;
+color:#ff5722;
+transform:translateY(-3px);
 }
 
 /* Footer */
 footer{
-text-align:center;
-padding:40px;
 background:#000;
-color:#ccc;
-margin-top:40px;
+padding:50px 40px 30px;
+text-align:center;
+margin-top:60px;
+border-top:1px solid rgba(255,87,34,0.3);
 }
 
 footer a{
-color:#ff5722;
+color:#ff784e;
 text-decoration:none;
 }
 
-/* Mobile Responsive */
+/* Mobile */
 @media (max-width:768px){
 .navbar{
 padding:15px 20px;
 }
-  
 .hamburger{
 display:block;
 }
-  
 .nav-links{
 display:none;
 flex-direction:column;
@@ -292,50 +505,47 @@ top:70px;
 left:0;
 width:100%;
 background:rgba(0,0,0,0.95);
-backdrop-filter:blur(12px);
 padding:25px;
 text-align:center;
 gap:20px;
-border-top:1px solid rgba(255,255,255,0.1);
 }
-  
 .nav-links.show{
 display:flex;
 }
-  
-.hero h1{
+.vibrant-bg h1{
 font-size:36px;
 }
-  
-.hero p{
+.vibrant-bg p{
 font-size:18px;
 }
-  
-.section{
+.hero-banner h2{
+font-size:28px;
+}
+.section-title{
+font-size:26px;
+}
+.section-card{
 padding:25px;
 }
-  
-h2{
-font-size:28px;
+.stat-number{
+font-size:36px;
 }
 }
 
-/* Button Style */
-.btn{
+.btn-back{
 display:inline-block;
-background:linear-gradient(135deg,#ff5722,#ff784e);
+background:rgba(255,87,34,0.2);
 padding:12px 28px;
 border-radius:40px;
-color:white;
+color:#ff784e;
 text-decoration:none;
-font-weight:bold;
-margin-top:15px;
+margin-top:20px;
 transition:0.3s;
 }
 
-.btn:hover{
-transform:translateY(-2px);
-box-shadow:0 8px 20px rgba(255,87,34,0.4);
+.btn-back:hover{
+background:#ff5722;
+color:white;
 }
 </style>
 
@@ -363,104 +573,166 @@ document.getElementById("navLinks").classList.toggle("show");
 </script>
 
 <div class="breadcrumb">
-<a href="index.html">Home</a> › <span>Darjeeling Style Momos in Kolkata</span>
+<a href="index.html">Home</a> › <span>Best Momos in Kolkata</span>
 </div>
 
-<header class="hero">
-    <h1>Authentic <span>Darjeeling Style Momos</span> in Kolkata</h1>
-    <p>Traditional Himalayan dumplings inspired by Darjeeling street food culture</p>
-</header>
+<div class="vibrant-bg">
+<h1>🏆 Best Momos in Kolkata 🏆</h1>
+<p>Rated #1 for Authentic Darjeeling Style Himalayan Dumplings</p>
+</div>
 
 <div class="container">
 
-<section class="section">
-<h2>What Makes Darjeeling Style Momos Special?</h2>
-<p>Darjeeling style momos are famous across India for their <strong>soft, thin handmade wrappers</strong>, <strong>juicy fillings</strong>, and <strong>bold spicy red chutney</strong>. Originally popular in the hill town of Darjeeling, these Himalayan dumplings have become one of the most loved street foods in Kolkata. The cool mountain climate of Darjeeling gave birth to this warming street food that locals and tourists have enjoyed for generations.</p>
-
-<p>What makes <strong>Darjeeling style momos unique</strong> is the way they are prepared. The dough is rolled thin by hand, filled with fresh ingredients, and folded into a half moon shape before being steamed over boiling water. The result is a soft, delicate dumpling that bursts with flavor in every bite. The <strong>spicy red chutney</strong> served alongside is made from fresh Himalayan red chilies and gives the momos their bold, fiery kick.</p>
-
-<p>At <strong>Momo Heaven</strong> we bring the authentic taste of Darjeeling street food to Kolkata with freshly prepared Himalayan dumplings made using traditional recipes and simple ingredients. Whether you prefer steamed or fried, chicken or veg, every plate we serve captures the true spirit of Darjeeling momo culture.</p>
-</section>
-
-<section class="section">
-<h2>Why Kolkata Loves Darjeeling Momos</h2>
-<p>Kolkata has always embraced the food culture of the hills, and momos have found a special place in the hearts of food lovers across the city. From college canteens to street stalls, momos are now one of the most searched street foods in Kolkata. At <strong>Momo Heaven</strong> we take pride in serving momos that stay true to their Himalayan roots.</p>
-
-<p>What sets our <strong>Darjeeling style momos</strong> apart is our commitment to authenticity. We use:</p>
-<ul style="margin: 15px 0 0 25px; line-height: 1.8;">
-<li>✨ Hand-rolled thin wrappers made fresh daily</li>
-<li>✨ Premium chicken and fresh vegetables from local markets</li>
-<li>✨ Secret Himalayan spice blend passed down through generations</li>
-<li>✨ Signature red chutney with roasted sesame and red chilies</li>
-</ul>
-</section>
-
-<section class="section">
-<h2>Our Darjeeling Style Momo Menu</h2>
-<ul class="momo-list">
-<li><strong>🍗 Steamed Chicken Momo</strong> — ₹80 (6 pcs) — Classic Darjeeling style with juicy minced chicken</li>
-<li><strong>🍗 Pan-Fried Chicken Momo</strong> — ₹120 (6 pcs) — Crispy bottom, soft top, authentic flavor</li>
-<li><strong>🌶️ Spicy Chicken Momo</strong> — ₹120 (6 pcs) — Extra Himalayan spices for bold heat</li>
-<li><strong>🧀 Chicken Cheese Momo</strong> — ₹130 (6 pcs) — Melted cheese meets traditional recipe</li>
-<li><strong>🥬 Steamed Veg Momo</strong> — ₹70 (6 pcs) — Fresh cabbage, carrots, and Himalayan spices</li>
-<li><strong>🥬 Pan-Fried Veg Momo</strong> — ₹100 (6 pcs) — Same great filling with crispy texture</li>
-<li><strong>🌶️ Spicy Veg Momo</strong> — ₹100 (6 pcs) — Vegetarian with an extra kick</li>
-<li><strong>🧀 Paneer Momo</strong> — ₹110 (6 pcs) — Soft paneer in thin Darjeeling-style wrapper</li>
-</ul>
-<p>All momos are served with our <strong>signature spicy red chutney</strong> — a Darjeeling specialty made from Himalayan red chilies, roasted sesame, and 7 secret spices.</p>
-<a href="index.html#menu" class="btn">📋 View Full Menu</a>
-</section>
-
-<h2>Popular Darjeeling Momo Varieties</h2>
-<div class="grid">
-<div class="card">
-<img src="https://i.postimg.cc/tJ046b6L/momo.jpg" alt="Steamed chicken Darjeeling momos served at Momo Heaven Kolkata">
-<h3>Steamed Chicken Momo</h3>
-<p>The classic Darjeeling style — thin wrapper, juicy filling, perfect with spicy red chutney.</p>
+<div class="hero-banner">
+<h2>Why We're Kolkata's #1 Momo Destination</h2>
+<div class="rating">⭐⭐⭐⭐⭐ <span>4.8/5 from 500+ Reviews</span></div>
+<p>Fresh handmade momos • Secret spicy chutney • Authentic Darjeeling recipe</p>
 </div>
-<div class="card">
-<img src="https://i.postimg.cc/vHbQw3tL/momo2.jpg" alt="Fried chicken Darjeeling style momos crispy and delicious">
-<h3>Pan-Fried Chicken Momo</h3>
-<p>Golden crispy bottom, soft steamed top — the best of both textures.</p>
+
+<div class="stats-grid">
+<div class="stat-card">
+<div class="stat-number">5000+</div>
+<div class="stat-label">Happy Customers</div>
 </div>
-<div class="card">
-<img src="https://i.postimg.cc/76tQ0wBx/momo-v3.avif" alt="Fresh veg Himalayan style dumplings at Momo Heaven Kolkata">
-<h3>Fresh Veg Himalayan Momo</h3>
-<p>Traditional Darjeeling style with fresh vegetables and Himalayan spices.</p>
+<div class="stat-card">
+<div class="stat-number">10+</div>
+<div class="stat-label">Momo Varieties</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">15 min</div>
+<div class="stat-label">Fresh Preparation</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">4.8⭐</div>
+<div class="stat-label">Google Rating</div>
 </div>
 </div>
 
-<section class="section">
-<h2>Frequently Asked Questions About Darjeeling Momos</h2>
-
-<h3>❓ What is the difference between Darjeeling momos and regular momos?</h3>
-<p>Darjeeling style momos are known for their <strong>thinner handmade wrappers</strong> and <strong>spicier red chutney</strong> compared to other styles. The filling is also more finely minced, giving it a smoother texture that locals in Darjeeling prefer.</p>
-
-<h3>❓ Are Darjeeling momos spicy?</h3>
-<p>The momos themselves are mildly spiced, but they are served with a <strong>signature spicy red chutney</strong> made from Himalayan red chilies. You can control the heat by adding as much chutney as you like.</p>
-
-<h3>❓ Where can I find authentic Darjeeling momos in Kolkata?</h3>
-<p><strong>Momo Heaven</strong> is one of the few places in Kolkata serving authentic Darjeeling style momos made with traditional recipes and fresh ingredients daily. Visit us to taste the real flavors of the Himalayas.</p>
-
-<h3>❓ Do you deliver Darjeeling momos?</h3>
-<p>Yes! We deliver across Kolkata. Call us or order on Zomato and Swiggy to enjoy authentic Darjeeling momos at home.</p>
-</section>
-
-<div style="text-align: center; margin-top: 30px;">
-<p>Looking for the <strong>best Darjeeling momos in Kolkata</strong>? Visit Momo Heaven or order online!</p>
-<a href="index.html" class="btn">🏠 Back to Homepage</a>
-<a href="tel:+919876543210" class="btn">📞 Order Now</a>
+<div class="section-card">
+<h2 class="section-title">🔥 Our Best Selling Momos 🔥</h2>
+<div class="momo-grid">
+<div class="momo-item">
+<div class="momo-image">
+<img src="https://i.postimg.cc/tJ046b6L/momo.jpg" alt="Best Chicken Momos in Kolkata">
+<span class="badge">BESTSELLER</span>
 </div>
+<div class="momo-info">
+<h3>🍗 Steamed Chicken Momo</h3>
+<div class="momo-price">₹80 | 6 pcs</div>
+<p class="momo-desc">The classic favorite — thin wrapper, juicy chicken filling, perfect with our signature red chutney.</p>
+</div>
+</div>
+<div class="momo-item">
+<div class="momo-image">
+<img src="https://i.postimg.cc/vHbQw3tL/momo2.jpg" alt="Fried Chicken Momos Kolkata">
+<span class="badge">CRISPY</span>
+</div>
+<div class="momo-info">
+<h3>🍗 Pan-Fried Chicken Momo</h3>
+<div class="momo-price">₹120 | 6 pcs</div>
+<p class="momo-desc">Golden crispy bottom, soft steamed top — the perfect texture combination.</p>
+</div>
+</div>
+<div class="momo-item">
+<div class="momo-image">
+<img src="https://i.postimg.cc/76tQ0wBx/momo-v3.avif" alt="Best Veg Momos in Kolkata">
+<span class="badge">VEG FAV</span>
+</div>
+<div class="momo-info">
+<h3>🥬 Spicy Veg Momo</h3>
+<div class="momo-price">₹100 | 6 pcs</div>
+<p class="momo-desc">Fresh vegetables with Himalayan spices — vegetarian delight!</p>
+</div>
+</div>
+<div class="momo-item">
+<div class="momo-image">
+<img src="https://i.postimg.cc/tJ046b6L/momo.jpg" alt="Cheese Chicken Momos Kolkata">
+<span class="badge">NEW</span>
+</div>
+<div class="momo-info">
+<h3>🧀 Chicken Cheese Momo</h3>
+<div class="momo-price">₹130 | 6 pcs</div>
+<p class="momo-desc">Melted cheese meets juicy chicken — a customer favorite!</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section-card">
+<h2 class="section-title">⭐ What Makes Us the Best?</h2>
+<div class="best-features">
+<div class="feature">
+<div class="feature-icon">🏔️</div>
+<h4>Authentic Darjeeling Recipe</h4>
+<p>Straight from the Himalayan hills — no shortcuts, just pure tradition.</p>
+</div>
+<div class="feature">
+<div class="feature-icon">🌶️</div>
+<h4>Secret Red Chutney</h4>
+<p>Our signature chutney is the most requested item — spicy, tangy, unforgettable!</p>
+</div>
+<div class="feature">
+<div class="feature-icon">🥟</div>
+<h4>Handmade Fresh Daily</h4>
+<p>Every wrapper rolled by hand, every momo made fresh when you order.</p>
+</div>
+<div class="feature">
+<div class="feature-icon">⚡</div>
+<h4>Never Frozen</h4>
+<p>We never pre-steam or freeze. Fresh taste guaranteed every time.</p>
+</div>
+</div>
+</div>
+
+<div class="section-card">
+<h2 class="section-title">❤️ What Our Customers Say</h2>
+<div class="review-grid">
+<div class="review-card">
+<div class="review-stars">★★★★★</div>
+<p class="review-text">"Finally found the best momos in Kolkata! The Darjeeling style is authentic and the chutney is to die for. Highly recommend the pan-fried chicken momos!"</p>
+<p class="reviewer">— Priya Sharma</p>
+</div>
+<div class="review-card">
+<div class="review-stars">★★★★★</div>
+<p class="review-text">"Been searching for good momos since moving to Kolkata. Momo Heaven is hands down the best. Fresh, juicy, and that red chutney is addictive!"</p>
+<p class="reviewer">— Rajiv Mehta</p>
+</div>
+<div class="review-card">
+<div class="review-stars">★★★★★</div>
+<p class="review-text">"The veg momos are incredible! Finally a place that does justice to Himalayan flavors. My go-to spot now."</p>
+<p class="reviewer">— Anjali Nair</p>
+</div>
+</div>
+</div>
+
+<div class="section-card">
+<h2 class="section-title">📍 Why Kolkata Loves Momo Heaven</h2>
+<p>Kolkata has a deep love for momos, and we've earned our reputation as one of the <strong>best momo spots in the city</strong>. Our commitment to authenticity, fresh ingredients, and that secret Himalayan chutney keeps customers coming back. Whether you're craving classic steamed momos or want to try our crispy fried versions, every bite takes you closer to the flavors of Darjeeling.</p>
+<p style="margin-top:15px;">Don't just take our word for it — come taste why we're rated the <strong>#1 place for momos in Kolkata</strong> by hundreds of happy customers!</p>
+</div>
+
+<div class="cta-section">
+<h3>🍽️ Ready to Taste the Best Momos in Kolkata?</h3>
+<p>Visit us today or order online for delivery!</p>
+<div class="cta-buttons">
+<a href="index.html#menu" class="cta-btn">📋 View Full Menu</a>
+<a href="tel:+919876543210" class="cta-btn-outline">📞 Call to Order</a>
+<a href="index.html#location" class="cta-btn-outline">📍 Get Directions</a>
+</div>
+</div>
+
+<a href="index.html" class="btn-back">← Back to Homepage</a>
 
 </div>
 
 <footer>
 <p><strong>🥟 Momo Heaven</strong></p>
-<p>Authentic Darjeeling & Himalayan Momos in Kolkata</p>
+<p>#1 Best Momos in Kolkata | Authentic Darjeeling Style</p>
 <p>📍 Lake Market Area, Kolkata | 📞 +91 98765 43210</p>
-<p>🕒 11 AM - 11 PM (Mon-Sun)</p>
-<p>© 2026 Momo Heaven | Best Darjeeling Momos in Kolkata</p>
-<p><a href="index.html">Home</a> | <a href="index.html#menu">Menu</a> | <a href="index.html#location">Location</a></p>
+<p>🕒 Open Daily: 11 AM - 11 PM</p>
+<p>⭐ 4.8 Rated | 5000+ Happy Customers</p>
+<p>© 2026 Momo Heaven | Best Momos in Kolkata</p>
+<p><a href="index.html">Home</a> | <a href="darjeeling-momos-kolkata.html">Darjeeling Momos</a> | <a href="index.html#location">Location</a></p>
 </footer>
 
 </body>
