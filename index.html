@@ -224,37 +224,76 @@ font-size:16px;
 color:#ccc;
 }
 
-/* WHY CHOOSE US GRID */
+/* WHY CHOOSE US - ENHANCED STYLES */
 
-.features-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:30px;
-margin-top:30px;
+.why-section{
+background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(255,87,34,0.15));
 }
 
-.feature{
+.why-heading{
+font-size:42px;
+margin-bottom:20px;
 text-align:center;
-padding:20px;
-background:rgba(255,255,255,0.05);
-border-radius:16px;
-transition:0.3s;
 }
 
-.feature:hover{
-transform:translateY(-5px);
-background:rgba(255,255,255,0.1);
+.why-subheading{
+text-align:center;
+font-size:20px;
+margin-bottom:40px;
+color:#ddd;
+}
+
+.feature-cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.feature-card{
+background:rgba(0,0,0,0.7);
+border-radius:20px;
+padding:30px 25px;
+text-align:center;
+transition:transform 0.3s ease, box-shadow 0.3s ease;
+border-bottom:3px solid #ff5722;
+}
+
+.feature-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
 .feature-icon{
-font-size:48px;
+font-size:64px;
+margin-bottom:20px;
+}
+
+.feature-card h3{
+font-size:26px;
+color:#ff5722;
 margin-bottom:15px;
 }
 
-.feature h3{
-font-size:22px;
-margin:10px 0;
-color:var(--accent);
+.feature-card p{
+font-size:16px;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+.feature-tag{
+font-size:14px;
+color:#ff784e;
+}
+
+.award-badge{
+text-align:center;
+margin-top:40px;
+padding:20px;
+background:rgba(255,87,34,0.2);
+border-radius:50px;
+max-width:500px;
+margin-left:auto;
+margin-right:auto;
 }
 
 /* MENU STYLES */
@@ -596,30 +635,53 @@ the best Darjeeling momos in Kolkata and Himalayan momo traditions
 </p>
 </section>
 
-<section class="section">
-<h2>Why Momo Heaven is <span>Kolkata's Favorite</span> for Darjeeling Momos</h2>
-<div class="features-grid">
-<div class="feature">
-<div class="feature-icon">🏔️</div>
-<h3>Authentic Darjeeling Recipe</h3>
-<p>Our recipes come straight from the Himalayan hills, preserving the original taste that momo lovers crave.</p>
-</div>
-<div class="feature">
-<div class="feature-icon">🌶️</div>
-<h3>Secret Red Chutney</h3>
-<p>House-made spicy chutney with Himalayan red chilies and toasted sesame seeds.</p>
-</div>
-<div class="feature">
-<div class="feature-icon">🥟</div>
-<h3>Thin Handmade Wrappers</h3>
-<p>Each momo is wrapped fresh daily for that perfect delicate, melt-in-mouth texture.</p>
-</div>
-<div class="feature">
-<div class="feature-icon">⚡</div>
-<h3>Made Fresh on Order</h3>
-<p>We prepare each batch fresh, never pre-steamed or frozen. Quality you can taste.</p>
-</div>
-</div>
+<!-- ENHANCED WHY CHOOSE US SECTION -->
+<section class="section why-section">
+    <h2 class="why-heading">Why Momo Heaven is <span style="color: #ff5722; border-bottom: 3px solid #ff5722; display: inline-block;">Kolkata's Favorite</span> for Darjeeling Momos</h2>
+    <p class="why-subheading">What makes our momos the talk of the town? Here's why Kolkata keeps coming back.</p>
+    
+    <div class="feature-cards">
+        
+        <!-- Card 1 -->
+        <div class="feature-card">
+            <div class="feature-icon">🏔️</div>
+            <h3>Straight from Darjeeling Hills</h3>
+            <p>Our recipes are passed down from local Darjeeling vendors. No adaptations — just pure, authentic Himalayan flavors that transport you to the mountains.</p>
+            <div class="feature-tag">✨ Family recipe since 1995</div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="feature-card">
+            <div class="feature-icon">🌶️</div>
+            <h3>Legendary Red Chutney</h3>
+            <p>Our secret recipe combines Himalayan red chilies, roasted sesame, garlic, and 7 signature spices. Customers ask for bottles of it — yes, it's that good!</p>
+            <div class="feature-tag">🔥 "Best chutney in Kolkata" - Food Blogger Review</div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="feature-card">
+            <div class="feature-icon">🥟</div>
+            <h3>Paper-Thin Handmade Wrappers</h3>
+            <p>Each wrapper is rolled by hand daily — thin enough to see the filling, strong enough to hold the juicy goodness. That's the authentic Darjeeling way.</p>
+            <div class="feature-tag">👩‍🍳 Made fresh every morning</div>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Never Frozen. Never Pre-Steamed.</h3>
+            <p>We make momos only when you order. No frozen stock, no reheated leftovers. Every batch is fresh, hot, and made with love — the way momos should be.</p>
+            <div class="feature-tag">⏱️ 10-15 min fresh preparation</div>
+        </div>
+        
+    </div>
+    
+    <!-- Award Badge -->
+    <div class="award-badge">
+        <span style="font-size: 24px;">🏆</span>
+        <span style="font-weight: bold; margin-left: 10px;">Voted "Best Street Food in Kolkata" 2025</span>
+        <span style="font-size: 24px; margin-left: 10px;">🏆</span>
+    </div>
 </section>
 
 <section class="gallery" id="gallery">
