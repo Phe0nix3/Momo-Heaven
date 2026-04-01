@@ -9,7 +9,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="canonical" href="https://phe0nix3.github.io/Momo-Heaven/darjeeling-momos-kolkata.html">
 
-<!-- Open Graph Tags -->
 <meta property="og:title" content="Authentic Darjeeling Style Momos in Kolkata | Momo Heaven">
 <meta property="og:description" content="Authentic Darjeeling style Himalayan momos in Kolkata. Fresh dumplings with thin wrappers and spicy red chutney.">
 <meta property="og:type" content="website">
@@ -318,7 +317,7 @@ margin-bottom:10px;
 display:block;
 }
 
-/* BUTTONS - FIXED & STABLE */
+/* BUTTONS */
 .button-group{
     display: flex;
     justify-content: center;
@@ -413,23 +412,94 @@ color:white;
     box-shadow: 0 8px 20px rgba(184,67,0,0.5);
 }
 
-/* FOOTER */
+/* FOOTER - DARK & PREMIUM */
 footer{
-text-align:center;
-padding:50px 40px 35px;
-background:linear-gradient(135deg, #050505, #0a0a0a);
-color:var(--text-muted);
-margin-top:60px;
-border-top:2px solid var(--gold);
+    background: linear-gradient(135deg, #050505, #0a0a0a);
+    color: var(--text-muted);
+    margin-top: 60px;
+    border-top: 3px solid var(--gold);
+    padding: 50px 20px 30px;
 }
 
-footer a{
-color:var(--gold);
-text-decoration:none;
+.footer-content{
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-footer a:hover{
-color:var(--orange-glow);
+.footer-logo{
+    font-size: 28px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--orange-burnt), var(--gold));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 15px;
+}
+
+.footer-logo span{
+    background: linear-gradient(135deg, var(--text-light), var(--gold-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.footer-tagline{
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+.footer-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.footer-item{
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.footer-item a{
+    color: var(--gold);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-item a:hover{
+    color: var(--orange-glow);
+}
+
+.footer-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.footer-links a{
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover{
+    color: var(--gold);
+}
+
+.footer-copyright{
+    font-size: 12px;
+    color: var(--text-muted);
+    opacity: 0.7;
 }
 
 /* MOBILE */
@@ -476,6 +546,13 @@ padding:40px 15px;
 .btn-back, .btn-order{
     width: 80%;
     text-align: center;
+}
+.footer-info{
+    flex-direction: column;
+    gap: 12px;
+}
+.footer-links{
+    gap: 20px;
 }
 }
 </style>
@@ -580,7 +657,6 @@ document.getElementById("navLinks").classList.toggle("show");
 </div>
 </section>
 
-<!-- FIXED BUTTONS - STABLE & ALIGNED -->
 <div class="button-group">
     <a href="index.html" class="btn-back">← Back to Homepage</a>
     <a href="tel:+919876543210" class="btn-order">📞 Order Now</a>
@@ -589,12 +665,25 @@ document.getElementById("navLinks").classList.toggle("show");
 </div>
 
 <footer>
-<p><strong>🥟 Momo Heaven</strong></p>
-<p>Authentic Darjeeling & Himalayan Momos in Kolkata</p>
-<p>📍 Lake Market Area, Kolkata | 📞 +91 98765 43210</p>
-<p>🕒 11 AM - 11 PM Daily | ⭐ 4.8 Rated</p>
-<p>© 2026 Momo Heaven | Best Darjeeling Momos in Kolkata</p>
-<p><a href="index.html">Home</a> | <a href="best-momos-kolkata.html">Best Momos</a> | <a href="index.html#location">Location</a></p>
+    <div class="footer-content">
+        <div class="footer-logo">🥟 <span>Momo Heaven</span></div>
+        <p class="footer-tagline">Authentic Darjeeling & Himalayan Momos in Kolkata</p>
+        <div class="footer-info">
+            <div class="footer-item">📍 Lake Market Area, Kolkata - 700029</div>
+            <div class="footer-item">📞 <a href="tel:+919876543210">+91 98765 43210</a></div>
+            <div class="footer-item">🕒 11 AM - 11 PM Daily</div>
+            <div class="footer-item">⭐ 4.8 Rated | 5000+ Happy Customers</div>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="best-momos-kolkata.html">Best Momos</a>
+            <a href="darjeeling-momos-kolkata.html">Darjeeling Momos</a>
+            <a href="index.html#location">Location</a>
+        </div>
+        <div class="footer-copyright">
+            © 2026 Momo Heaven | Best Darjeeling Momos in Kolkata
+        </div>
+    </div>
 </footer>
 
 </body>
