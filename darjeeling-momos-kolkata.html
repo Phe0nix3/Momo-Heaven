@@ -16,91 +16,63 @@
 <meta property="og:url" content="https://phe0nix3.github.io/Momo-Heaven/darjeeling-momos-kolkata.html">
 <meta property="og:image" content="https://i.postimg.cc/tJ046b6L/momo.jpg">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
---accent:#ff5722;
---accent2:#ff784e;
---accent-light:#ff9a6e;
---gold:#ffc107;
+--orange-burnt:#b84300;
+--orange-rich:#d35400;
+--orange-glow:#f39c12;
+--gold:#d4af37;
+--gold-light:#e5c158;
+--black-bg:#0a0a0a;
+--black-card:#141414;
+--black-dark:#050505;
+--text-light:#e8e6e3;
+--text-muted:#a8a6a3;
+--border-dark:#2a2a2a;
 }
 
 *{
 box-sizing:border-box;
 margin:0;
-padding:0;
 }
 
 body{
-font-family:'Karma',serif;
-background:linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-color:#ffffff;
-}
-
-/* Vibrant Header Background */
-.vibrant-bg{
-background:linear-gradient(135deg, #ff5722 0%, #ff784e 50%, #ff9a6e 100%);
-padding:60px 0;
-text-align:center;
-position:relative;
-overflow:hidden;
-}
-
-.vibrant-bg::before{
-content:"🏔️";
-position:absolute;
-font-size:200px;
-opacity:0.1;
-bottom:-30px;
-right:-30px;
-transform:rotate(-15deg);
-}
-
-.vibrant-bg::after{
-content:"🥟";
-position:absolute;
-font-size:180px;
-opacity:0.1;
-top:-40px;
-left:-20px;
-transform:rotate(10deg);
-}
-
-.vibrant-bg h1{
-font-size:54px;
-margin-bottom:15px;
-text-shadow:3px 3px 6px rgba(0,0,0,0.3);
-}
-
-.vibrant-bg p{
-font-size:22px;
-opacity:0.95;
+font-family:'Poppins',sans-serif;
+background:var(--black-bg);
+color:var(--text-light);
 }
 
 /* NAVBAR */
 .navbar{
 position:sticky;
 top:0;
-background:rgba(0,0,0,0.95);
+background:rgba(10,10,10,0.95);
 backdrop-filter:blur(12px);
 padding:15px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:100;
-border-bottom:2px solid #ff5722;
+border-bottom:2px solid var(--orange-burnt);
 }
 
 .logo{
-font-size:26px;
-font-weight:bold;
-color:#ff5722;
+font-size:28px;
+font-weight:800;
+background:linear-gradient(135deg, var(--orange-burnt), var(--gold));
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
 }
 
 .logo span{
-color:white;
+background:linear-gradient(135deg, var(--text-light), var(--gold-light));
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
 }
 
 .nav-links{
@@ -110,23 +82,22 @@ align-items:center;
 }
 
 .nav-links a{
-color:white;
+color:var(--text-light);
 text-decoration:none;
 font-weight:500;
 font-size:16px;
 transition:0.3s;
 position:relative;
-padding-bottom:5px;
 }
 
 .nav-links a::after{
 content:'';
 position:absolute;
-bottom:0;
+bottom:-5px;
 left:0;
 width:0;
 height:2px;
-background:#ff5722;
+background:linear-gradient(135deg, var(--orange-burnt), var(--gold));
 transition:width 0.3s ease;
 }
 
@@ -135,99 +106,138 @@ width:100%;
 }
 
 .nav-links a:hover{
-color:#ff5722;
+color:var(--gold-light);
 }
 
 .nav-cta{
-background:linear-gradient(135deg, #ff5722, #ff784e);
+background:linear-gradient(135deg, var(--orange-burnt), var(--gold));
 padding:10px 24px;
 border-radius:40px;
-color:white;
-text-decoration:none;
-font-weight:bold;
+color:white !important;
+font-weight:700;
 transition:0.3s;
-box-shadow:0 4px 12px rgba(255,87,34,0.4);
-animation: pulse 2s infinite;
-}
-
-@keyframes pulse{
-0%,100%{box-shadow:0 4px 12px rgba(255,87,34,0.4);}
-50%{box-shadow:0 6px 20px rgba(255,87,34,0.7);}
+box-shadow:0 4px 15px rgba(184,67,0,0.4);
 }
 
 .nav-cta:hover{
 transform:translateY(-2px);
-box-shadow:0 8px 25px rgba(255,87,34,0.6);
+box-shadow:0 8px 25px rgba(184,67,0,0.6);
 }
 
 .hamburger{
 display:none;
 font-size:28px;
 cursor:pointer;
-color:white;
+color:var(--gold);
 }
 
-/* Breadcrumb */
+/* BREADCRUMB */
 .breadcrumb{
 padding:15px 40px;
-background:rgba(0,0,0,0.6);
+background:rgba(0,0,0,0.5);
 font-size:14px;
+color:var(--text-muted);
+border-bottom:1px solid var(--border-dark);
 }
 
 .breadcrumb a{
-color:#ff784e;
+color:var(--gold);
 text-decoration:none;
+font-weight:600;
 }
 
-/* Container */
+/* HERO */
+.hero{
+position:relative;
+min-height:70vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.55)), url('https://i.postimg.cc/T3BNnrns/momo-jpg.jpg') center/cover;
+background-attachment:fixed;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:900px;
+padding:20px;
+animation:fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:56px;
+margin-bottom:15px;
+background:linear-gradient(135deg, #fff, var(--gold-light));
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+}
+
+.hero h1 span{
+background:linear-gradient(135deg, var(--orange-glow), var(--gold));
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+}
+
+.hero p{
+font-size:20px;
+color:var(--text-light);
+}
+
+/* CONTAINER */
 .container{
 max-width:1200px;
 margin:0 auto;
-padding:40px 20px;
+padding:60px 20px;
 }
 
-/* Hero Banner */
-.hero-banner{
-background:linear-gradient(135deg, rgba(255,87,34,0.2), rgba(0,0,0,0.8)), url('https://i.postimg.cc/tJ046b6L/momo.jpg');
-background-size:cover;
-background-position:center;
-border-radius:24px;
-padding:60px 40px;
-margin-bottom:40px;
-text-align:center;
-border:1px solid rgba(255,87,34,0.3);
+/* SECTIONS */
+.section{
+background:var(--black-card);
+border-radius:28px;
+padding:45px;
+margin-bottom:45px;
+border:1px solid var(--border-dark);
+transition:transform 0.3s ease;
 }
 
-.hero-banner h2{
-font-size:42px;
-margin-bottom:15px;
-color:#ff5722;
+.section:hover{
+transform:translateY(-5px);
+box-shadow:0 20px 35px rgba(0,0,0,0.3);
 }
 
-/* Section Cards */
-.section-card{
-background:rgba(0,0,0,0.7);
-border-radius:24px;
-padding:40px;
-margin-bottom:40px;
-border:1px solid rgba(255,87,34,0.2);
-transition:all 0.3s ease;
-}
-
-.section-card:hover{
-border-color:#ff5722;
-box-shadow:0 10px 40px rgba(255,87,34,0.1);
-}
-
-.section-title{
-font-size:32px;
+h2{
+font-family:'Playfair Display',serif;
+font-size:38px;
 margin-bottom:25px;
-color:#ff5722;
-border-left:4px solid #ff5722;
-padding-left:20px;
+color:var(--gold);
+font-weight:700;
 }
 
-/* Features Grid */
+h3{
+font-size:24px;
+margin:25px 0 15px;
+color:var(--orange-glow);
+font-weight:600;
+}
+
+p{
+font-size:17px;
+line-height:1.8;
+color:var(--text-muted);
+margin-bottom:20px;
+}
+
+/* FEATURES GRID */
 .features-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -236,17 +246,18 @@ margin-top:30px;
 }
 
 .feature-card{
-background:linear-gradient(135deg, rgba(255,255,255,0.08), rgba(0,0,0,0.4));
+background:linear-gradient(135deg, #1a1a1a, #0f0f0f);
 border-radius:20px;
 padding:30px;
 text-align:center;
-transition:all 0.4s ease;
-border-bottom:3px solid #ff5722;
+transition:all 0.3s ease;
+border:1px solid var(--border-dark);
 }
 
 .feature-card:hover{
 transform:translateY(-8px);
-box-shadow:0 20px 40px rgba(255,87,34,0.2);
+border-color:var(--gold);
+box-shadow:0 15px 30px rgba(212,175,55,0.1);
 }
 
 .feature-icon{
@@ -255,117 +266,132 @@ margin-bottom:15px;
 }
 
 .feature-card h3{
-font-size:24px;
-color:#ff784e;
+font-size:22px;
+color:var(--gold);
 margin-bottom:12px;
 }
 
 .feature-card p{
-font-size:15px;
-color:#ccc;
-line-height:1.5;
+font-size:14px;
+color:var(--text-muted);
 }
 
-/* Menu List */
+/* MENU LIST */
 .momo-list{
 list-style:none;
 padding:0;
 }
 
 .momo-list li{
-padding:15px 0;
-border-bottom:1px solid rgba(255,255,255,0.1);
-font-size:18px;
+padding:18px;
+margin:12px 0;
+background:linear-gradient(135deg, #1a1a1a, #121212);
+border-radius:16px;
+border-left:4px solid var(--gold);
+transition:all 0.2s;
+}
+
+.momo-list li:hover{
+transform:translateX(8px);
+border-left-color:var(--orange-burnt);
 }
 
 .momo-list li strong{
-color:#ff5722;
+color:var(--orange-glow);
+font-size:18px;
 }
 
 /* FAQ */
 .faq-item{
-margin-bottom:25px;
-padding:15px;
-background:rgba(255,255,255,0.05);
-border-radius:12px;
+margin-bottom:20px;
+padding:18px;
+background:linear-gradient(135deg, #1a1a1a, #121212);
+border-radius:16px;
+border-left:4px solid var(--gold);
 }
 
 .faq-question{
-font-size:20px;
-font-weight:bold;
-color:#ff784e;
-margin-bottom:8px;
+font-size:18px;
+font-weight:700;
+color:var(--gold);
+margin-bottom:10px;
 display:block;
 }
 
-/* CTA Section */
-.cta-section{
-background:linear-gradient(135deg, #ff5722, #ff784e);
-border-radius:24px;
-padding:50px 40px;
-text-align:center;
-margin-top:40px;
-}
-
-.cta-section h3{
-font-size:32px;
-margin-bottom:15px;
-}
-
-.cta-buttons{
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
-margin-top:25px;
-}
-
-.cta-btn{
-background:#fff;
-color:#ff5722;
+/* BUTTON */
+.btn{
+display:inline-block;
+background:linear-gradient(135deg, var(--orange-burnt), var(--gold));
 padding:14px 32px;
 border-radius:50px;
+color:white;
 text-decoration:none;
-font-weight:bold;
+font-weight:700;
+margin-top:20px;
 transition:0.3s;
+box-shadow:0 4px 15px rgba(184,67,0,0.4);
+position:relative;
+overflow:hidden;
 }
 
-.cta-btn:hover{
+.btn::before{
+content:'';
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+transition:left 0.5s ease;
+}
+
+.btn:hover::before{
+left:100%;
+}
+
+.btn:hover{
 transform:translateY(-3px);
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
+box-shadow:0 10px 25px rgba(184,67,0,0.5);
 }
 
-.cta-btn-outline{
-background:transparent;
-border:2px solid #fff;
-color:#fff;
-padding:12px 30px;
-border-radius:50px;
+.btn-back{
+display:inline-block;
+background:rgba(184,67,0,0.2);
+padding:12px 28px;
+border-radius:40px;
+color:var(--gold);
 text-decoration:none;
-font-weight:bold;
+font-weight:600;
+margin-top:20px;
 transition:0.3s;
+border:1px solid var(--border-dark);
 }
 
-.cta-btn-outline:hover{
-background:#fff;
-color:#ff5722;
+.btn-back:hover{
+background:linear-gradient(135deg, var(--orange-burnt), var(--gold));
+color:white;
 }
 
-/* Footer */
+/* FOOTER */
 footer{
-background:#000;
-padding:50px 40px 30px;
 text-align:center;
+padding:50px 40px 35px;
+background:linear-gradient(135deg, #050505, #0a0a0a);
+color:var(--text-muted);
 margin-top:60px;
-border-top:1px solid rgba(255,87,34,0.3);
+border-top:2px solid var(--gold);
 }
 
 footer a{
-color:#ff784e;
+color:var(--gold);
 text-decoration:none;
 }
 
-/* Mobile */
+footer a:hover{
+color:var(--orange-glow);
+}
+
+/* MOBILE */
 @media (max-width:768px){
 .navbar{
 padding:15px 20px;
@@ -380,45 +406,30 @@ position:absolute;
 top:70px;
 left:0;
 width:100%;
-background:rgba(0,0,0,0.95);
+background:rgba(10,10,10,0.98);
 padding:25px;
 text-align:center;
 gap:20px;
+border-bottom:1px solid var(--gold);
 }
 .nav-links.show{
 display:flex;
 }
-.vibrant-bg h1{
+.hero h1{
 font-size:36px;
 }
-.hero-banner h2{
-font-size:28px;
-}
-.section-title{
-font-size:26px;
-}
-.section-card{
+.section{
 padding:25px;
+margin:30px 20px;
 }
+h2{
+font-size:30px;
 }
-
-.btn-back{
-display:inline-block;
-background:rgba(255,87,34,0.2);
-padding:12px 28px;
-border-radius:40px;
-color:#ff784e;
-text-decoration:none;
-margin-top:20px;
-transition:0.3s;
+.container{
+padding:40px 15px;
 }
-
-.btn-back:hover{
-background:#ff5722;
-color:white;
 }
 </style>
-
 </head>
 
 <body>
@@ -446,27 +457,24 @@ document.getElementById("navLinks").classList.toggle("show");
 <a href="index.html">Home</a> › <span>Darjeeling Style Momos in Kolkata</span>
 </div>
 
-<div class="vibrant-bg">
-<h1>🏔️ Authentic <span style="color:#fff;">Darjeeling Style Momos</span> in Kolkata 🥟</h1>
-<p>Traditional Himalayan dumplings with thin wrappers & spicy red chutney</p>
+<section class="hero">
+<div class="hero-content">
+<h1>Authentic <span>Darjeeling Style Momos</span> in Kolkata</h1>
+<p>Traditional Himalayan dumplings inspired by Darjeeling street food culture</p>
 </div>
+</section>
 
 <div class="container">
 
-<div class="hero-banner">
-<h2>Experience the True Taste of Darjeeling</h2>
-<p>Thin handmade wrappers • Juicy fillings • Secret Himalayan chutney</p>
-</div>
+<section class="section">
+<h2>🏔️ What Makes Darjeeling Style Momos Special?</h2>
+<p>Darjeeling style momos are famous across India for their <strong style="color:var(--gold);">soft, thin handmade wrappers</strong>, <strong style="color:var(--gold);">juicy fillings</strong>, and <strong style="color:var(--gold);">bold spicy red chutney</strong>. Originally popular in the hill town of Darjeeling, these Himalayan dumplings have become one of the most loved street foods in Kolkata.</p>
+<p>What makes <strong style="color:var(--orange-glow);">Darjeeling style momos unique</strong> is the way they are prepared. The dough is rolled thin by hand, filled with fresh ingredients, and folded into a half moon shape before being steamed. The <strong style="color:var(--orange-glow);">spicy red chutney</strong> served alongside is made from fresh Himalayan red chilies and gives the momos their bold, fiery kick.</p>
+<p>At <strong style="color:var(--gold);">Momo Heaven</strong> we bring the authentic taste of Darjeeling street food to Kolkata with freshly prepared Himalayan dumplings made using traditional recipes passed down from local Darjeeling vendors.</p>
+</section>
 
-<div class="section-card">
-<h2 class="section-title">🏔️ What Makes Darjeeling Momos Special?</h2>
-<p>Darjeeling style momos are famous across India for their <strong>soft, thin handmade wrappers</strong>, <strong>juicy fillings</strong>, and <strong>bold spicy red chutney</strong>. Originally popular in the hill town of Darjeeling, these Himalayan dumplings have become one of the most loved street foods in Kolkata.</p>
-<p style="margin-top:15px;">What makes <strong>Darjeeling style momos unique</strong> is the way they are prepared. The dough is rolled thin by hand, filled with fresh ingredients, and folded into a half moon shape before being steamed. The <strong>spicy red chutney</strong> served alongside is made from fresh Himalayan red chilies and gives the momos their bold, fiery kick.</p>
-<p style="margin-top:15px;">At <strong>Momo Heaven</strong> we bring the authentic taste of Darjeeling street food to Kolkata with freshly prepared Himalayan dumplings made using traditional recipes passed down from local Darjeeling vendors.</p>
-</div>
-
-<div class="section-card">
-<h2 class="section-title">🥟 Our Darjeeling Style Momo Menu</h2>
+<section class="section">
+<h2>🥟 Our Darjeeling Style Momo Menu</h2>
 <ul class="momo-list">
 <li><strong>🍗 Steamed Chicken Momo</strong> — ₹80 (6 pcs) — Classic Darjeeling style with juicy minced chicken</li>
 <li><strong>🍗 Pan-Fried Chicken Momo</strong> — ₹120 (6 pcs) — Crispy bottom, soft top, authentic flavor</li>
@@ -477,12 +485,12 @@ document.getElementById("navLinks").classList.toggle("show");
 <li><strong>🌶️ Spicy Veg Momo</strong> — ₹100 (6 pcs) — Vegetarian with an extra kick</li>
 <li><strong>🧀 Paneer Momo</strong> — ₹110 (6 pcs) — Soft paneer in thin Darjeeling-style wrapper</li>
 </ul>
-<p style="margin-top:20px;">All momos are served with our <strong>signature spicy red chutney</strong> — a Darjeeling specialty made from Himalayan red chilies, roasted sesame, and 7 secret spices.</p>
-<a href="index.html#menu" class="btn-back" style="margin-top:20px; display:inline-block;">📋 View Full Menu</a>
-</div>
+<p style="margin-top:20px;">All momos are served with our <strong style="color:var(--gold);">signature spicy red chutney</strong> — a Darjeeling specialty made from Himalayan red chilies, roasted sesame, and 7 secret spices.</p>
+<a href="index.html#menu" class="btn">📋 View Full Menu</a>
+</section>
 
-<div class="section-card">
-<h2 class="section-title">✨ Why Darjeeling Momos Are Different</h2>
+<section class="section">
+<h2>✨ Why Darjeeling Momos Are Different</h2>
 <div class="features-grid">
 <div class="feature-card">
 <div class="feature-icon">🥟</div>
@@ -505,10 +513,10 @@ document.getElementById("navLinks").classList.toggle("show");
 <p>We make momos only when you order. Fresh, hot, and made with love.</p>
 </div>
 </div>
-</div>
+</section>
 
-<div class="section-card">
-<h2 class="section-title">❓ Frequently Asked Questions About Darjeeling Momos</h2>
+<section class="section">
+<h2>❓ Frequently Asked Questions About Darjeeling Momos</h2>
 <div class="faq-item">
 <span class="faq-question">What is the difference between Darjeeling momos and regular momos?</span>
 <p>Darjeeling style momos are known for their <strong>thinner handmade wrappers</strong> and <strong>spicier red chutney</strong> compared to other styles. The filling is also more finely minced, giving it a smoother texture.</p>
@@ -521,19 +529,12 @@ document.getElementById("navLinks").classList.toggle("show");
 <span class="faq-question">Where can I find authentic Darjeeling momos in Kolkata?</span>
 <p><strong>Momo Heaven</strong> is one of the few places in Kolkata serving authentic Darjeeling style momos made with traditional recipes and fresh ingredients daily.</p>
 </div>
-</div>
+</section>
 
-<div class="cta-section">
-<h3>🥟 Taste Authentic Darjeeling Momos Today!</h3>
-<p>Visit us in Kolkata or order online for delivery</p>
-<div class="cta-buttons">
-<a href="index.html#menu" class="cta-btn">📋 View Full Menu</a>
-<a href="tel:+919876543210" class="cta-btn-outline">📞 Call to Order</a>
-<a href="index.html#location" class="cta-btn-outline">📍 Get Directions</a>
-</div>
-</div>
-
+<div style="text-align: center;">
 <a href="index.html" class="btn-back">← Back to Homepage</a>
+<a href="tel:+919876543210" class="btn" style="margin-left:15px;">📞 Order Now</a>
+</div>
 
 </div>
 
@@ -541,8 +542,8 @@ document.getElementById("navLinks").classList.toggle("show");
 <p><strong>🥟 Momo Heaven</strong></p>
 <p>Authentic Darjeeling & Himalayan Momos in Kolkata</p>
 <p>📍 Lake Market Area, Kolkata | 📞 +91 98765 43210</p>
-<p>🕒 Open Daily: 11 AM - 11 PM</p>
-<p>© 2026 Momo Heaven | Authentic Darjeeling Momos in Kolkata</p>
+<p>🕒 11 AM - 11 PM Daily | ⭐ 4.8 Rated</p>
+<p>© 2026 Momo Heaven | Best Darjeeling Momos in Kolkata</p>
 <p><a href="index.html">Home</a> | <a href="best-momos-kolkata.html">Best Momos</a> | <a href="index.html#location">Location</a></p>
 </footer>
 
