@@ -16,17 +16,24 @@
 <meta property="og:url" content="https://phe0nix3.github.io/Momo-Heaven/">
 <meta property="og:image" content="https://i.postimg.cc/tJ046b6L/momo.jpg">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
---primary:#e67e22;
---primary-dark:#d35400;
---primary-light:#f39c12;
---bg-light:#fff9f0;
---text-dark:#2c2c2c;
---text-gray:#555;
+--orange-burnt:#b84300;
+--orange-rich:#d35400;
+--orange-glow:#f39c12;
+--gold:#d4af37;
+--gold-light:#e5c158;
+--black-bg:#0a0a0a;
+--black-card:#141414;
+--black-dark:#050505;
+--text-light:#e8e6e3;
+--text-muted:#a8a6a3;
+--border-dark:#2a2a2a;
+--shadow-glow:0 0 20px rgba(184,67,0,0.3);
 }
 
 *{
@@ -36,32 +43,39 @@ margin:0;
 
 body{
 font-family:'Poppins',sans-serif;
-background:var(--bg-light);
-color:var(--text-dark);
+background:var(--black-bg);
+color:var(--text-light);
 }
 
-/* NAVBAR */
+/* NAVBAR - GLASS DARK */
 .navbar{
 position:sticky;
 top:0;
-background:rgba(255,255,255,0.95);
-backdrop-filter:blur(10px);
+background:rgba(10,10,10,0.95);
+backdrop-filter:blur(12px);
 padding:15px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:100;
-box-shadow:0 2px 15px rgba(0,0,0,0.05);
+border-bottom:2px solid var(--orange-burnt);
 }
 
 .logo{
-font-size:26px;
-font-weight:bold;
-color:var(--primary);
+font-size:28px;
+font-weight:800;
+background:linear-gradient(135deg, var(--orange-burnt), var(--gold));
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+letter-spacing:-0.5px;
 }
 
 .logo span{
-color:var(--text-dark);
+background:linear-gradient(135deg, var(--text-light), var(--gold-light));
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
 }
 
 .nav-links{
@@ -71,60 +85,95 @@ align-items:center;
 }
 
 .nav-links a{
-color:var(--text-dark);
+color:var(--text-light);
 text-decoration:none;
 font-weight:500;
 font-size:16px;
 transition:0.3s;
+position:relative;
+}
+
+.nav-links a::after{
+content:'';
+position:absolute;
+bottom:-5px;
+left:0;
+width:0;
+height:2px;
+background:linear-gradient(135deg, var(--orange-burnt), var(--gold));
+transition:width 0.3s ease;
+}
+
+.nav-links a:hover::after{
+width:100%;
 }
 
 .nav-links a:hover{
-color:var(--primary);
+color:var(--gold-light);
 }
 
 .nav-cta{
-background:var(--primary);
+background:linear-gradient(135deg, var(--orange-burnt), var(--gold));
 padding:10px 24px;
 border-radius:40px;
 color:white !important;
-font-weight:bold;
+font-weight:700;
 transition:0.3s;
+box-shadow:0 4px 15px rgba(184,67,0,0.4);
 }
 
 .nav-cta:hover{
-background:var(--primary-dark);
 transform:translateY(-2px);
+box-shadow:0 8px 25px rgba(184,67,0,0.6);
+}
+
+.nav-cta::after{
+display:none;
 }
 
 .hamburger{
 display:none;
 font-size:28px;
 cursor:pointer;
-color:var(--text-dark);
+color:var(--gold);
 }
 
 /* BREADCRUMB */
 .breadcrumb{
 padding:15px 40px;
-background:#f5efe5;
+background:rgba(0,0,0,0.5);
 font-size:14px;
-color:var(--text-gray);
+color:var(--text-muted);
+border-bottom:1px solid var(--border-dark);
 }
 
 .breadcrumb a{
-color:var(--primary);
+color:var(--gold);
 text-decoration:none;
+font-weight:600;
 }
 
-/* HERO - LIGHTER OVERLAY */
+/* HERO - WITH STEAMING MOMO IMAGE */
 .hero{
 position:relative;
-min-height:80vh;
+min-height:90vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('https://i.postimg.cc/T3BNnrns/momo-jpg.jpg') center/cover;
+background:linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.55)), url('https://i.postimg.cc/tJ046b6L/momo.jpg') center/cover;
+background-attachment:fixed;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:radial-gradient(circle at 50% 50%, rgba(184,67,0,0.15), transparent 70%);
+pointer-events:none;
 }
 
 .hero-content{
@@ -132,93 +181,154 @@ position:relative;
 z-index:2;
 max-width:900px;
 padding:20px;
+animation:fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 .hero-logo{
 width:130px;
 border-radius:50%;
 margin-bottom:20px;
-border:4px solid white;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
+border:3px solid var(--gold);
+box-shadow:0 0 30px rgba(212,175,55,0.5);
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-8px);}
 }
 
 .hero h1{
-font-size:56px;
+font-family:'Playfair Display',serif;
+font-size:62px;
 margin-bottom:15px;
-color:white;
-text-shadow:2px 2px 8px rgba(0,0,0,0.3);
+background:linear-gradient(135deg, #fff, var(--gold-light));
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+text-shadow:none;
+font-weight:800;
 }
 
 .hero h1 span{
-color:var(--primary-light);
+background:linear-gradient(135deg, var(--orange-glow), var(--gold));
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
 }
 
 .tagline{
 font-size:22px;
-margin-bottom:30px;
-color:white;
-text-shadow:1px 1px 4px rgba(0,0,0,0.3);
+margin-bottom:35px;
+color:var(--text-light);
+font-weight:500;
+letter-spacing:1px;
 }
 
 /* BUTTON */
 .btn{
-padding:14px 32px;
+padding:16px 38px;
 font-size:18px;
 border:none;
-border-radius:40px;
-background:var(--primary);
+border-radius:50px;
+background:linear-gradient(135deg, var(--orange-burnt), var(--gold));
 color:white;
 cursor:pointer;
-margin:10px;
-transition:0.3s;
-font-weight:600;
-box-shadow:0 4px 12px rgba(0,0,0,0.1);
+margin:12px;
+transition:all 0.3s ease;
+font-weight:700;
+box-shadow:0 6px 20px rgba(184,67,0,0.4);
+position:relative;
+overflow:hidden;
+}
+
+.btn::before{
+content:'';
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+transition:left 0.5s ease;
+}
+
+.btn:hover::before{
+left:100%;
 }
 
 .btn:hover{
-background:var(--primary-dark);
 transform:translateY(-3px);
-box-shadow:0 8px 20px rgba(0,0,0,0.15);
+box-shadow:0 12px 30px rgba(184,67,0,0.6);
 }
 
 /* SECTIONS */
 .section{
 max-width:1100px;
-margin:60px auto;
-padding:40px;
-background:white;
-border-radius:24px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
+margin:70px auto;
+padding:50px;
+background:var(--black-card);
+border-radius:28px;
+border:1px solid var(--border-dark);
+box-shadow:0 15px 35px rgba(0,0,0,0.3);
+transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover{
+transform:translateY(-5px);
+box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
 h2{
-font-size:36px;
-margin-bottom:20px;
+font-family:'Playfair Display',serif;
+font-size:42px;
+margin-bottom:25px;
 text-align:center;
-color:var(--text-dark);
+background:linear-gradient(135deg, var(--text-light), var(--gold-light));
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+font-weight:700;
 }
 
 h2 span{
-color:var(--primary);
+background:linear-gradient(135deg, var(--orange-burnt), var(--gold));
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
 }
 
 h3{
-font-size:24px;
+font-size:26px;
 margin:20px 0 15px 0;
-color:var(--text-dark);
+color:var(--gold);
+font-weight:700;
 }
 
 p{
-font-size:18px;
+font-size:17px;
 line-height:1.8;
-color:var(--text-gray);
+color:var(--text-muted);
 }
 
-/* TRUST BADGES */
+/* TRUST BADGES - GLOW EFFECT */
 .trust-badges{
-background:#f5efe5;
-padding:40px 20px;
+background:linear-gradient(135deg, var(--black-dark), var(--black-card));
+padding:55px 20px;
 text-align:center;
+border-top:1px solid var(--orange-burnt);
+border-bottom:1px solid var(--orange-burnt);
 }
 
 .badges-container{
@@ -232,94 +342,140 @@ gap:30px;
 
 .badge{
 text-align:center;
+transition:transform 0.3s ease;
+}
+
+.badge:hover{
+transform:translateY(-5px);
 }
 
 .badge-number{
-font-size:42px;
-font-weight:bold;
-color:var(--primary);
+font-size:48px;
+font-weight:800;
+background:linear-gradient(135deg, var(--orange-burnt), var(--gold));
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
 }
 
 .badge-label{
-font-size:16px;
-color:var(--text-gray);
+font-size:15px;
+color:var(--text-muted);
+font-weight:600;
+margin-top:8px;
 }
 
-/* WHY CHOOSE US - LIGHT VERSION */
+/* WHY CHOOSE US - PREMIUM CARDS */
 .why-section{
-background:#fefaf5;
-border:1px solid #f0e0d0;
+background:var(--black-card);
+border:1px solid var(--border-dark);
 }
 
 .why-heading{
-font-size:42px;
+font-family:'Playfair Display',serif;
+font-size:44px;
 margin-bottom:20px;
 text-align:center;
-color:var(--text-dark);
+background:linear-gradient(135deg, var(--text-light), var(--gold-light));
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+font-weight:800;
 }
 
 .why-subheading{
 text-align:center;
-font-size:20px;
-margin-bottom:40px;
-color:var(--text-gray);
+font-size:18px;
+margin-bottom:50px;
+color:var(--gold);
+font-weight:500;
+letter-spacing:1px;
 }
 
 .feature-cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+gap:35px;
 }
 
 .feature-card{
-background:white;
-border-radius:20px;
-padding:30px 25px;
+background:linear-gradient(135deg, #1a1a1a, #0f0f0f);
+border-radius:24px;
+padding:35px 25px;
 text-align:center;
-transition:transform 0.3s ease, box-shadow 0.3s ease;
-border:1px solid #f0e0d0;
+transition:all 0.4s ease;
+border:1px solid var(--border-dark);
+position:relative;
+overflow:hidden;
+}
+
+.feature-card::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(135deg, rgba(184,67,0,0.1), rgba(212,175,55,0.05));
+opacity:0;
+transition:opacity 0.4s ease;
+}
+
+.feature-card:hover::before{
+opacity:1;
 }
 
 .feature-card:hover{
-transform:translateY(-8px);
-box-shadow:0 20px 40px rgba(0,0,0,0.1);
-border-color:var(--primary-light);
+transform:translateY(-10px);
+border-color:var(--gold);
+box-shadow:0 20px 35px rgba(184,67,0,0.2);
 }
 
 .feature-icon{
 font-size:64px;
 margin-bottom:20px;
+animation:floatIcon 4s ease-in-out infinite;
+}
+
+@keyframes floatIcon{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-6px);}
 }
 
 .feature-card h3{
 font-size:24px;
-color:var(--primary);
+color:var(--gold);
 margin-bottom:15px;
+font-weight:700;
 }
 
 .feature-card p{
 font-size:15px;
 line-height:1.6;
-color:var(--text-gray);
+color:var(--text-muted);
 }
 
 .feature-tag{
-font-size:13px;
-color:var(--primary);
+font-size:12px;
+color:var(--orange-glow);
 margin-top:15px;
 display:inline-block;
+font-weight:600;
+background:rgba(184,67,0,0.15);
+padding:6px 15px;
+border-radius:30px;
 }
 
 .award-badge{
 text-align:center;
-margin-top:40px;
-padding:15px 25px;
-background:linear-gradient(135deg, #fff5e8, #fff);
-border-radius:50px;
-max-width:400px;
+margin-top:45px;
+padding:18px 30px;
+background:linear-gradient(135deg, rgba(184,67,0,0.15), rgba(212,175,55,0.08));
+border-radius:60px;
+max-width:450px;
 margin-left:auto;
 margin-right:auto;
-border:1px solid #f0e0d0;
+border:1px solid var(--gold);
 }
 
 /* MENU STYLES */
@@ -329,90 +485,108 @@ padding:0;
 }
 
 .menu li{
-padding:18px;
-margin:12px 0;
-background:#fefaf5;
-border-radius:16px;
-border-left:4px solid var(--primary);
+padding:22px;
+margin:15px 0;
+background:linear-gradient(135deg, #1a1a1a, #121212);
+border-radius:20px;
+border-left:5px solid var(--gold);
+transition:all 0.3s ease;
+}
+
+.menu li:hover{
+transform:translateX(10px);
+border-left-color:var(--orange-burnt);
+box-shadow:0 5px 15px rgba(212,175,55,0.1);
 }
 
 .menu li strong{
-font-size:18px;
-color:var(--primary);
+font-size:19px;
+background:linear-gradient(135deg, var(--orange-glow), var(--gold));
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+font-weight:700;
 }
 
 .menu li em{
-font-size:14px;
-color:#888;
+font-size:13px;
+color:var(--text-muted);
 display:block;
-margin-top:5px;
+margin-top:8px;
 }
 
 /* GALLERY */
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+gap:30px;
 max-width:1100px;
-margin:60px auto;
+margin:70px auto;
 padding:0 20px;
 }
 
 .gallery img{
 width:100%;
-border-radius:20px;
-transition:0.4s;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+border-radius:24px;
+transition:all 0.4s ease;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+border:1px solid var(--border-dark);
 }
 
 .gallery img:hover{
 transform:scale(1.03);
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
+box-shadow:0 20px 35px rgba(212,175,55,0.2);
+border-color:var(--gold);
 }
 
 /* REVIEWS */
 .reviews-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
 margin-top:30px;
 }
 
 .review-card{
-background:#fefaf5;
-padding:25px;
-border-radius:20px;
-transition:0.3s;
-border:1px solid #f0e0d0;
+background:linear-gradient(135deg, #1a1a1a, #121212);
+padding:30px;
+border-radius:24px;
+transition:all 0.3s ease;
+border:1px solid var(--border-dark);
 }
 
 .review-card:hover{
-background:white;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
+transform:translateY(-5px);
+border-color:var(--gold);
+box-shadow:0 15px 30px rgba(212,175,55,0.1);
 }
 
 .stars{
-color:#f39c12;
-font-size:18px;
-margin-bottom:10px;
+color:var(--gold);
+font-size:20px;
+margin-bottom:15px;
+letter-spacing:3px;
 }
 
 .review-text{
-margin:10px 0;
+margin:15px 0;
 font-style:italic;
-color:var(--text-gray);
+color:var(--text-muted);
+font-size:15px;
+line-height:1.7;
 }
 
 .reviewer{
-font-weight:bold;
-color:var(--primary);
+font-weight:700;
+color:var(--gold);
+font-size:15px;
 }
 
 /* LOCATION GRID */
 .location-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:30px;
+gap:35px;
 }
 
 @media (max-width:768px){
@@ -422,16 +596,17 @@ grid-template-columns:1fr;
 }
 
 .info-card{
-background:#fefaf5;
-padding:25px;
-border-radius:20px;
-border:1px solid #f0e0d0;
+background:linear-gradient(135deg, #1a1a1a, #121212);
+padding:32px;
+border-radius:24px;
+border:1px solid var(--border-dark);
 }
 
 .info-card h3{
-color:var(--primary);
+color:var(--gold);
 margin-top:0;
-margin-bottom:15px;
+margin-bottom:18px;
+font-size:22px;
 }
 
 .info-card ul{
@@ -440,86 +615,105 @@ padding:0;
 }
 
 .info-card li{
-margin:12px 0;
-color:var(--text-gray);
+margin:14px 0;
+color:var(--text-muted);
 }
 
 /* GUIDE CARDS */
 .guide-grid{
 display:grid;
 grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-gap:20px;
+gap:30px;
 margin-top:30px;
 }
 
 .guide-card{
-background:#fefaf5;
-padding:20px;
-border-radius:16px;
-transition:0.3s;
-border:1px solid #f0e0d0;
+background:linear-gradient(135deg, #1a1a1a, #121212);
+padding:26px;
+border-radius:20px;
+transition:all 0.3s ease;
+border:1px solid var(--border-dark);
 }
 
 .guide-card:hover{
-background:white;
-transform:translateY(-3px);
-box-shadow:0 10px 20px rgba(0,0,0,0.05);
+transform:translateY(-5px);
+border-color:var(--gold);
+box-shadow:0 15px 25px rgba(212,175,55,0.1);
 }
 
 .guide-card h3{
-font-size:22px;
+font-size:24px;
 margin-bottom:15px;
-color:var(--primary);
+color:var(--gold);
+font-weight:700;
 }
 
 .guide-card a{
-color:var(--primary);
+color:var(--orange-glow);
 text-decoration:none;
 display:block;
-margin:10px 0;
+margin:12px 0;
+font-weight:500;
+transition:0.2s;
 }
 
 .guide-card a:hover{
-text-decoration:underline;
+color:var(--gold);
+transform:translateX(6px);
+display:inline-block;
 }
 
 /* FAQ */
 .faq-item{
 margin-bottom:20px;
-padding:15px;
-background:#fefaf5;
-border-radius:16px;
+padding:20px;
+background:linear-gradient(135deg, #1a1a1a, #121212);
+border-radius:18px;
+border-left:4px solid var(--gold);
+transition:0.2s;
+}
+
+.faq-item:hover{
+border-left-color:var(--orange-burnt);
 }
 
 .faq-question{
 font-size:18px;
-font-weight:600;
-color:var(--primary);
-margin-bottom:8px;
+font-weight:700;
+color:var(--gold);
+margin-bottom:10px;
 display:block;
 }
 
-/* FOOTER */
+/* FOOTER - DARK & PREMIUM */
 footer{
 text-align:center;
-padding:40px;
-background:#2c2c2c;
-color:#ccc;
+padding:55px 40px 40px;
+background:linear-gradient(135deg, #050505, #0a0a0a);
+color:var(--text-muted);
 margin-top:80px;
+border-top:2px solid var(--gold);
 }
 
 footer a{
-color:var(--primary-light);
+color:var(--gold);
 text-decoration:none;
+font-weight:500;
+transition:0.2s;
+}
+
+footer a:hover{
+color:var(--orange-glow);
+text-decoration:underline;
 }
 
 /* MAP IFRAME */
 .map-iframe{
 width:100%;
 height:100%;
-min-height:300px;
+min-height:320px;
 border-radius:20px;
-border:none;
+border:1px solid var(--border-dark);
 }
 
 /* Mobile */
@@ -537,36 +731,59 @@ position:absolute;
 top:70px;
 left:0;
 width:100%;
-background:white;
+background:rgba(10,10,10,0.98);
 padding:25px;
 text-align:center;
 gap:20px;
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
+border-bottom:1px solid var(--gold);
 }
 .nav-links.show{
 display:flex;
 }
 .hero h1{
-font-size:36px;
+font-size:38px;
 }
 .tagline{
 font-size:18px;
 }
 .hero{
 min-height:70vh;
+background-attachment:scroll;
 }
 h2{
-font-size:28px;
+font-size:32px;
 }
 .section{
-padding:25px;
-margin:40px 20px;
+padding:30px;
+margin:45px 20px;
 }
 .why-heading{
-font-size:32px;
+font-size:34px;
+}
+.btn{
+padding:12px 28px;
+font-size:15px;
 }
 }
 
+.btn-back{
+display:inline-block;
+background:linear-gradient(135deg, rgba(184,67,0,0.2), rgba(212,175,55,0.1));
+padding:12px 30px;
+border-radius:40px;
+color:var(--gold);
+text-decoration:none;
+font-weight:600;
+margin-top:25px;
+transition:0.3s;
+border:1px solid var(--border-dark);
+}
+
+.btn-back:hover{
+background:linear-gradient(135deg, var(--orange-burnt), var(--gold));
+color:white;
+transform:translateY(-2px);
+}
 </style>
 
 <script type="application/ld+json">
@@ -660,7 +877,7 @@ document.getElementById("navLinks").classList.toggle("show");
 <div class="hero-content">
 <img class="hero-logo" src="https://i.postimg.cc/3xxd83Vv/IMG-20250417-002037.jpg" alt="Momo Heaven – Best Darjeeling Momos in Kolkata">
 <h1>Best Darjeeling Style <span>Himalayan Momos</span> in Kolkata</h1>
-<p class="tagline">Authentic street-style momos • Fresh daily • Secret Himalayan chutney</p>
+<p class="tagline">✨ Authentic street-style momos • Fresh daily • Secret Himalayan chutney ✨</p>
 <button class="btn" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">📋 View Full Menu</button>
 <a href="tel:+919876543210"><button class="btn">📞 Order Now</button></a>
 </div>
@@ -691,13 +908,12 @@ document.getElementById("navLinks").classList.toggle("show");
 <h2>Authentic Himalayan & <span>Darjeeling Style Momos</span></h2>
 <p>Darjeeling is famous for its delicious Himalayan street-style momos, a beloved dumpling dish enjoyed across the mountain region. These soft dumplings are known for their thin wrappers, juicy fillings, and spicy red chutney. Inspired by this rich food culture, Momo Heaven brings the authentic taste of Darjeeling momos to Kolkata.</p>
 <p>Our menu includes freshly prepared chicken and veg momos inspired by traditional Darjeeling recipes. Each plate captures the warm Himalayan flavors that have made Darjeeling momos popular among food lovers across India.</p>
-<p>Learn more about the history and flavors of <a href="darjeeling-momos-kolkata.html" style="color:var(--primary);">the best Darjeeling momos in Kolkata and Himalayan momo traditions</a>.</p>
+<p>Learn more about the history and flavors of <a href="darjeeling-momos-kolkata.html" style="color:var(--gold); font-weight:600;">the best Darjeeling momos in Kolkata and Himalayan momo traditions</a>.</p>
 </section>
 
-<!-- WHY CHOOSE US - LIGHT VERSION -->
 <section class="section why-section">
-    <h2 class="why-heading">Why Momo Heaven is <span style="color: var(--primary);">Kolkata's Favorite</span> for Darjeeling Momos</h2>
-    <p class="why-subheading">What makes our momos the talk of the town? Here's why Kolkata keeps coming back.</p>
+    <h2 class="why-heading">Why Momo Heaven is <span style="color: var(--gold);">Kolkata's Favorite</span> for Darjeeling Momos</h2>
+    <p class="why-subheading">✦ What makes our momos the talk of the town? Here's why Kolkata keeps coming back ✦</p>
     
     <div class="feature-cards">
         <div class="feature-card">
@@ -728,8 +944,8 @@ document.getElementById("navLinks").classList.toggle("show");
     
     <div class="award-badge">
         <span style="font-size: 24px;">⭐</span>
-        <span style="font-weight: bold; margin-left: 10px;">4.8 Rating on Google (150+ Reviews)</span>
-        <span style="font-size: 24px; margin-left: 10px;">⭐</span>
+        <span style="font-weight: 700; margin-left: 12px;">4.8 Rating on Google (150+ Reviews)</span>
+        <span style="font-size: 24px; margin-left: 12px;">⭐</span>
     </div>
 </section>
 
@@ -741,9 +957,9 @@ document.getElementById("navLinks").classList.toggle("show");
 
 <section class="section" id="menu">
 <h2>Our <span>Menu</span></h2>
-<p style="text-align: center; margin-bottom: 30px;">Authentic Darjeeling-style momos made fresh daily. Served with our signature spicy red chutney.</p>
+<p style="text-align: center; margin-bottom: 35px; color: var(--text-muted);">Authentic Darjeeling-style momos made fresh daily. Served with our signature spicy red chutney.</p>
 
-<h3 style="font-size: 26px; margin: 25px 0 15px 0; border-left: 4px solid var(--primary); padding-left: 15px;">🍗 Chicken Momos</h3>
+<h3 style="font-size: 28px; margin: 30px 0 20px 0; border-left: 5px solid var(--gold); padding-left: 18px;">🍗 Chicken Momos</h3>
 <ul class="menu">
 <li><strong>Steamed Chicken Momo</strong> — ₹80 (6 pcs)<br><em>Juicy minced chicken wrapped in a thin, soft dumpling skin. Classic Darjeeling style.</em></li>
 <li><strong>Pan-Fried Chicken Momo</strong> — ₹120 (6 pcs)<br><em>Crispy on the bottom, soft on top. A delightful twist on the steamed classic.</em></li>
@@ -751,7 +967,7 @@ document.getElementById("navLinks").classList.toggle("show");
 <li><strong>Chicken Cheese Momo</strong> — ₹130 (6 pcs)<br><em>Melted cheese mixed with spiced chicken for an extra creamy bite.</em></li>
 </ul>
 
-<h3 style="font-size: 26px; margin: 25px 0 15px 0; border-left: 4px solid var(--primary); padding-left: 15px;">🥬 Veg Momos</h3>
+<h3 style="font-size: 28px; margin: 30px 0 20px 0; border-left: 5px solid var(--gold); padding-left: 18px;">🥬 Veg Momos</h3>
 <ul class="menu">
 <li><strong>Steamed Veg Momo</strong> — ₹70 (6 pcs)<br><em>Freshly chopped cabbage, carrots, and onions with Himalayan spices.</em></li>
 <li><strong>Pan-Fried Veg Momo</strong> — ₹100 (6 pcs)<br><em>Same flavorful veg filling with a crispy golden base.</em></li>
@@ -759,14 +975,14 @@ document.getElementById("navLinks").classList.toggle("show");
 <li><strong>Paneer Momo</strong> — ₹110 (6 pcs)<br><em>Soft paneer blended with mild spices for a rich vegetarian option.</em></li>
 </ul>
 
-<h3 style="font-size: 26px; margin: 25px 0 15px 0; border-left: 4px solid var(--primary); padding-left: 15px;">🎉 Combo Offers</h3>
+<h3 style="font-size: 28px; margin: 30px 0 20px 0; border-left: 5px solid var(--gold); padding-left: 18px;">🎉 Combo Offers</h3>
 <ul class="menu">
 <li><strong>Momos Platter</strong> — ₹180<br><em>12 pcs (6 chicken + 6 veg) + extra chutney. Perfect for sharing.</em></li>
 <li><strong>Family Combo</strong> — ₹350<br><em>24 pcs + 2 extra chutneys + drinks. Best value for groups.</em></li>
 </ul>
 
-<h3 style="font-size: 26px; margin: 25px 0 15px 0; border-left: 4px solid var(--primary); padding-left: 15px;">🌶️ Our Signature Chutney</h3>
-<p>All momos come with our house-made <strong>spicy red chutney</strong>, a Darjeeling specialty made with red chilies, sesame, and secret Himalayan spices.</p>
+<h3 style="font-size: 28px; margin: 30px 0 20px 0; border-left: 5px solid var(--gold); padding-left: 18px;">🌶️ Our Signature Chutney</h3>
+<p>All momos come with our house-made <strong style="color:var(--gold);">spicy red chutney</strong>, a Darjeeling specialty made with red chilies, sesame, and secret Himalayan spices.</p>
 </section>
 
 <section class="section">
@@ -814,7 +1030,7 @@ document.getElementById("navLinks").classList.toggle("show");
 </div>
 </div>
 
-<p style="margin-top: 30px; text-align: center;">📚 <strong>Coming Soon:</strong> Cheese Momos Guide | Paneer Momos Guide | Tibetan Momo Traditions</p>
+<p style="margin-top: 35px; text-align: center;">📚 <strong>Coming Soon:</strong> Cheese Momos Guide | Paneer Momos Guide | Tibetan Momo Traditions</p>
 </section>
 
 <section class="section" id="faq">
@@ -844,7 +1060,7 @@ document.getElementById("navLinks").classList.toggle("show");
 <ul>
 <li>Monday - Friday: <strong>12:00 PM – 10:00 PM</strong></li>
 <li>Saturday - Sunday: <strong>11:00 AM – 11:00 PM</strong></li>
-<li style="margin-top: 10px;">📞 Call: <strong>+91 98765 43210</strong></li>
+<li style="margin-top: 12px;">📞 Call: <strong>+91 98765 43210</strong></li>
 <li>🛵 Delivery: Zomato | Swiggy</li>
 </ul>
 </div>
